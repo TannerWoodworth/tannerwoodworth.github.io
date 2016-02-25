@@ -1,4 +1,4 @@
-{% if page.url == '/' %}
+{% if page.url contains 'home/' %}
   {% assign home_class = ' active' %}
 {% elsif page.url contains 'example/' %}
   {% assign example_class = ' active' %}
@@ -18,7 +18,7 @@
     <nav class="nav-main col-12 span-8">
       <ul class="nav-main-list">
         <li class="nav-home first{{ home_class }}">
-          <a href="/">Home</a>
+          <a href="/home/">Home</a>
         </li>
         <li class="nav-example {{ example_class }}">
           <a href="/example/">Example</a>
