@@ -2,6 +2,8 @@
   {% assign home_class = ' active' %}
 {% elsif page.url contains 'example/' %}
   {% assign example_class = ' active' %}
+{% elsif page.url contains 'cool/' %}
+  {% assign cool_class = ' active' %}
 {% endif %}
 
 
@@ -19,7 +21,10 @@
           <a href="/">Home</a>
         </li>
         <li class="nav-example {{ example_class }}">
-          <a href="/">Example</a>
+          <a href="/example/">Example</a>
+        </li>
+        <li class="nav-cool {{ cool_class }}">
+          <a href="/cool/">Cool</a>
         </li>
       </ul>
     </nav>

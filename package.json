@@ -8,13 +8,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@bitbucket.org:informaticsstudio/resourcerepo-jekyll-setup.git"
+    "url": ""
   },
   "keywords": [
     "Jekyll",
     "projectname"
   ],
-  "author": "Informatics Studio",
+  "author": "Tanner Woodworth",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.11.1",
