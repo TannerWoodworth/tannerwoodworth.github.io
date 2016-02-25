@@ -1,4 +1,4 @@
-{% assign confbaseurltoggle = "ON" %}
+{% assign confbaseurltoggle = "OFF" %}
 {% assign base_url = "" %}
 
 {% if confbaseurltoggle == "ON" %}
@@ -7,7 +7,7 @@
     {% assign base_url = base_url | append:"../" %}
   {% endfor %}
 {% else %}
-  {% capture base_url %}{{ "/" }}{% endcapture %}
+  {% capture base_url %}{{ site.baseurl }}{% endcapture %}
 {% endif %}
 
 {% assign src_replace = base_url | prepend:'src="' %}

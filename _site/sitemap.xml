@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>/cool/</loc>
+<loc>http://tannerwoodworth.github.io//cool/</loc>
 </url>
 <url>
-<loc>/example/</loc>
+<loc>http://tannerwoodworth.github.io//example/</loc>
 </url>
 <url>
-<loc>/home/</loc>
+<loc>http://tannerwoodworth.github.io//home/</loc>
 </url>
 <url>
-<loc>/index.html</loc>
-<lastmod>2016-02-25T17:53:03-05:00</lastmod>
+<loc>http://tannerwoodworth.github.io//</loc>
 </url>
 </urlset>

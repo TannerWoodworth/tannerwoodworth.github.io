@@ -7,7 +7,7 @@ email: dev@informatics-studio.com
 description: > # this means to ignore newlines until "url:"
  Default Meta Descritpion
 url: "" # the base hostname & protocol for your site
-baseurl: ""
+baseurl: "http://tannerwoodworth.github.io/"
 permalink: pretty
 
 # Custom Build Options
