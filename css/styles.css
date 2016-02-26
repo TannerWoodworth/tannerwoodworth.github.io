@@ -28,7 +28,7 @@ main {
 .info_block {
   padding: .5em;
 }
-.info_block:nth-child(even) {
+.info_block:nth-child(odd) {
   background-color: #eee;
 }
 .info_block h3 {
