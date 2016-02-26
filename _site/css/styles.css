@@ -19,6 +19,7 @@ footer {
 }
 main {
   width: 80%;
+  padding: .5em;
   margin: 0 auto;
 }
 .info_block h3 {
@@ -44,6 +45,7 @@ main {
 nav {
   color: #fff;
   border-bottom: #eee solid 1px;
+  margin-bottom: 1em;
 }
 nav ul {
   list-style-type: none;
