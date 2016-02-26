@@ -1,18 +1,35 @@
 //Pull in the framework here.
+// ================= COLORS ================= //
+@light-gray: #eee;
+@medium-gray: #666;
+@dark-gray: #333;
+// ================= SEMANTIC ================= //
 html{
   background-color: #fff;
-  color:#333;
+  color: @dark-gray;
   font-family: 'Lato', sans-serif;
   font-size: 100%;
 }
 body {
-  background-color: #eee;
+  background-color: @light-gray;
   width: 80%;
   margin: 0 auto;
   padding: .5em .5em 0 .5em;
 }
+
 footer{
-  color:#666;
+  color:@medium-gray;
   padding: .5em 0;
   text-align: center;
+}
+// ============== TYPOGRAPHY ============== //
+
+// ============== NAVIGATION ============= //
+nav{
+  ul{
+    list-style-type: none;
+  }
+  li{
+    display: inline;
+  }
 }

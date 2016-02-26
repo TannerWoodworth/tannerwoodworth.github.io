@@ -1,9 +1,9 @@
 # Site settings
-name: NOTITLE
-title: NOTITLE
+name: SpeedyMama
+title: SpeedyMama Web Hosting
 subtitle: >
   NOSUBTITLE
-email: dev@informatics-studio.com
+email: twoodworth2014@gmail.com
 description: > # this means to ignore newlines until "url:"
  Default Meta Descritpion
 url: "" # the base hostname & protocol for your site
