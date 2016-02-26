@@ -20,6 +20,7 @@ footer {
 .info_block h3 {
   color: #666;
   font-weight: bold;
+  text-transform: capitalize;
 }
 .info_block p {
   line-height: 1.4;
