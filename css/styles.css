@@ -17,6 +17,10 @@ footer {
   padding: .5em 0;
   text-align: center;
 }
+#splash h2 {
+  text-align: center;
+  font-weight: bold;
+}
 nav {
   color: #fff;
   border-bottom: #eee solid 1px;
@@ -24,6 +28,8 @@ nav {
 nav ul {
   list-style-type: none;
   padding: 0px;
+  width: 50%;
+  float: right;
 }
 nav ul li {
   display: inline;
