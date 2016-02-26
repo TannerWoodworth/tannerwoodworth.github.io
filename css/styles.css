@@ -17,9 +17,21 @@ footer {
   padding: .5em 0;
   text-align: center;
 }
+.info_block h3 {
+  color: #666;
+  font-weight: bold;
+}
+.info_block p {
+  line-height: 1.4;
+  color: #333;
+}
 #splash h2 {
   text-align: center;
   font-weight: bold;
+}
+.body_copy {
+  line-height: 1.4;
+  color: #333;
 }
 nav {
   color: #fff;
