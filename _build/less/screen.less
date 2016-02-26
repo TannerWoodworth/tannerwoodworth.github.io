@@ -4,7 +4,12 @@
 @medium-gray: #666;
 @dark-gray: #333;
 // ================= MIXINS ================= //
-
+.right{
+  float:right;
+}
+.left{
+  float:left;
+}
 // =============== SEMANTIC ================ //
 html{
   background-color: #fff;
@@ -28,6 +33,7 @@ main{
   margin: 0 auto;
 }
 .info_block{
+  padding:.5em;
   h3{
     color: @medium-gray;
     font-weight: bold;
@@ -35,6 +41,9 @@ main{
   }
   p{
     .body_copy;
+  }
+  img{
+
   }
 }
 .right{
