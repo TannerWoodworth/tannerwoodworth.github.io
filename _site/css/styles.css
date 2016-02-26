@@ -19,6 +19,7 @@ footer {
 }
 main {
   width: 80%;
+  margin: 0 auto;
 }
 .info_block h3 {
   color: #666;
