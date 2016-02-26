@@ -3,7 +3,9 @@
 @light-gray: #eee;
 @medium-gray: #666;
 @dark-gray: #333;
-// ================= SEMANTIC ================= //
+// ================= MIXINS ================= //
+
+// =============== SEMANTIC ================ //
 html{
   background-color: #fff;
   color: @dark-gray;
@@ -12,7 +14,6 @@ html{
 }
 body {
   background-color: @light-gray;
-  width: 80%;
   margin: 0 auto;
   padding: .5em .5em 0 .5em;
 }
@@ -22,18 +23,21 @@ footer{
   text-align: center;
 }
 // ============== TYPOGRAPHY ============== //
+.border-bottom{
+  border-bottom: @light-gray solid 1px;
+}
 
 // ============== NAVIGATION ============= //
 nav{
   color: #fff;
-  border-bottom: @medium-gray solid 1px;
+  .border-bottom;
   ul{
     list-style-type: none;
-  }
-  li{
-    display: inline;
-    a{
-      text-decoration: none;
+    li{
+      display: inline;
+      a{
+        text-decoration: none;
+      }
     }
   }
 }

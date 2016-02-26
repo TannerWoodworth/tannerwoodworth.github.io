@@ -6,7 +6,6 @@ html {
 }
 body {
   background-color: #eee;
-  width: 80%;
   margin: 0 auto;
   padding: .5em .5em 0 .5em;
 }
@@ -15,16 +14,19 @@ footer {
   padding: .5em 0;
   text-align: center;
 }
+.border-bottom {
+  border-bottom: #eee solid 1px;
+}
 nav {
   color: #fff;
-  border-bottom: #666 solid 1px;
+  border-bottom: #eee solid 1px;
 }
 nav ul {
   list-style-type: none;
 }
-nav li {
+nav ul li {
   display: inline;
 }
-nav li a {
+nav ul li a {
   text-decoration: none;
 }
