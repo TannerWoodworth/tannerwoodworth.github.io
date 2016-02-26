@@ -1,3 +1,10 @@
+html {
+  color: #333;
+  font-family: 'Lato', sans-serif;
+}
 body {
-  background-color: #eee;
+  color: #f00;
+  width: 80%;
+  margin: 0 auto;
+  padding: .5em;
 }
