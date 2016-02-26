@@ -17,6 +17,9 @@ footer {
   padding: .5em 0;
   text-align: center;
 }
+main {
+  width: 80%;
+}
 .info_block h3 {
   color: #666;
   font-weight: bold;
@@ -26,7 +29,7 @@ footer {
   line-height: 1.4;
   color: #333;
 }
-.info_block .right {
+.right {
   background-color: #eee;
 }
 #splash h2 {
