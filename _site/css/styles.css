@@ -1,3 +1,6 @@
+.border-bottom {
+  border-bottom: #eee solid 1px;
+}
 html {
   background-color: #fff;
   color: #333;
@@ -13,9 +16,6 @@ footer {
   color: #666;
   padding: .5em 0;
   text-align: center;
-}
-.border-bottom {
-  border-bottom: #eee solid 1px;
 }
 nav {
   color: #fff;
