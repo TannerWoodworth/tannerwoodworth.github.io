@@ -34,6 +34,9 @@ main{
 }
 .info_block{
   padding:.5em;
+  &:nth-child(even){
+    background-color: @light-gray;
+  }
   h3{
     color: @medium-gray;
     font-weight: bold;
@@ -45,9 +48,6 @@ main{
   img{
 
   }
-}
-.right{
-  background-color: @light-gray;
 }
 // ============== TYPOGRAPHY ============== //
 #splash{

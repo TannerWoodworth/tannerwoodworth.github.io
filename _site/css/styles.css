@@ -28,6 +28,9 @@ main {
 .info_block {
   padding: .5em;
 }
+.info_block:nth-child(even) {
+  background-color: #eee;
+}
 .info_block h3 {
   color: #666;
   font-weight: bold;
@@ -36,9 +39,6 @@ main {
 .info_block p {
   line-height: 1.4;
   color: #333;
-}
-.right {
-  background-color: #eee;
 }
 #splash h2 {
   text-align: center;
