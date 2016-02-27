@@ -22,7 +22,7 @@ footer {
 }
 main {
   width: 80%;
-  padding: .5em;
+  padding: 1em .5em;
   margin: 0 auto;
 }
 .info_block {
@@ -33,6 +33,7 @@ main {
 }
 .info_block:nth-child(odd) img {
   float: right;
+  margin-left: 1em;
 }
 .info_block h3 {
   color: #666;
@@ -43,9 +44,11 @@ main {
   line-height: 1.4;
   color: #333;
   width: 50%;
+  float: left;
 }
 .info_block img {
   float: left;
+  margin-right: 1em;
 }
 #splash h2 {
   text-align: center;
