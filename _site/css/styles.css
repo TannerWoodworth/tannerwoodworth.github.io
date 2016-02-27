@@ -35,6 +35,8 @@ main {
 .info_block:nth-child(odd) img {
   float: right;
   margin-left: 1em;
+  width: 40%;
+  max-width: 350px;
 }
 .info_block:nth-child(odd) p {
   margin-left: 5em;
