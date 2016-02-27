@@ -56,6 +56,9 @@ main {
   float: left;
   margin-top: .5em;
 }
+.info_block .text_content {
+  margin-top: 4em;
+}
 #splash h2 {
   text-align: center;
   font-weight: bold;
