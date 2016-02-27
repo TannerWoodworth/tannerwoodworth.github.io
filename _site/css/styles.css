@@ -72,10 +72,9 @@ main {
 header {
   border-bottom: #eee solid 1px;
 }
-header img {
+#logo {
   float: left;
   width: 150px;
-  max-width: 150px;
 }
 nav {
   color: #fff;
