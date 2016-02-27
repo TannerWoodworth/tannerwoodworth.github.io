@@ -90,6 +90,11 @@ main {
   float: left;
   margin: .5em 0 0 0;
 }
+@media only screen and (max-width: 680px) {
+  .info_block p {
+    width: 100%;
+  }
+}
 .info_block .text_content {
   margin-top: 4em;
 }
