@@ -150,6 +150,7 @@ main {
 }
 header {
   border-bottom: #eee solid 1px;
+  margin: 0 auto;
   width: 80%;
   max-width: 1000px;
 }
