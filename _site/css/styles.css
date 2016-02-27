@@ -90,10 +90,12 @@ nav ul li {
   padding-right: .5em;
 }
 nav ul li a {
+  transition: all 0.4s ease;
   text-decoration: none;
   color: #4290c5;
 }
 nav ul li a:hover {
+  transition: all 0.4s ease;
   color: #316B92;
 }
 .clearfix:after {
