@@ -29,7 +29,7 @@ main {
   padding: .5em 0;
 }
 .info_block:nth-child(odd) {
-  background-color: #eee;
+  background-color: #f0eae2;
 }
 .info_block h3 {
   color: #666;
@@ -39,6 +39,7 @@ main {
 .info_block p {
   line-height: 1.4;
   color: #333;
+  width: 50%;
 }
 #splash h2 {
   text-align: center;
