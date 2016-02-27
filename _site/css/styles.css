@@ -83,7 +83,7 @@ nav {
 }
 nav ul {
   list-style-type: none;
-  padding: .5em 0 1em 0;
+  margin: .5em 0 1em 0;
 }
 nav ul li {
   display: inline;
