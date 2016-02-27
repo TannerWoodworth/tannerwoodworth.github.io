@@ -1,9 +1,9 @@
-{% if page.url contains 'home/' %}
-  {% assign home_class = ' active' %}
+{% if page.url contains 'setup/' %}
+  {% assign setup-class = ' active' %}
 {% elsif page.url contains 'example/' %}
-  {% assign example_class = ' active' %}
-{% elsif page.url contains 'cool/' %}
-  {% assign cool_class = ' active' %}
+  {% assign about-class = ' active' %}
+{% elsif page.url contains 'index' %}
+  {% assign home-class = ' active' %}
 {% endif %}
 
 
@@ -11,14 +11,14 @@
   <a href="index.html"><img id="logo" src="images/speedy_mama.png"/></a>
     <nav>
       <ul class="clearfix">
-        <li class="nav-home first{{ home_class }}">
-          <a href="/home/">Home</a>
+        <li class="nav-cool {{ home-class }}">
+          <a href="index.html">Home</a>
         </li>
-        <li class="nav-example {{ example_class }}">
-          <a href="/example/">Example</a>
+        <li class="nav-home first{{ setup-class }}">
+          <a href="setup.html">Get Started</a>
         </li>
-        <li class="nav-cool {{ cool_class }}">
-          <a href="/cool/">Cool</a>
+        <li class="nav-example {{ about-class }}">
+          <a href="about.html">About</a>
         </li>
       </ul>
     </nav>
