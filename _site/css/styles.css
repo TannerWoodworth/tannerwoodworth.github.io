@@ -58,6 +58,7 @@ main {
 @media only screen and (max-width: 680px) {
   .info_block:nth-child(odd) p {
     float: none;
+    margin-left: 0;
   }
 }
 .info_block:nth-child(odd) h3 {
