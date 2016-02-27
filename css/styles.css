@@ -55,6 +55,11 @@ main {
     margin-left: 1em;
   }
 }
+@media only screen and (max-width: 680px) {
+  .info_block:nth-child(odd) p {
+    float: none;
+  }
+}
 .info_block:nth-child(odd) h3 {
   margin-left: 4.3em;
 }
