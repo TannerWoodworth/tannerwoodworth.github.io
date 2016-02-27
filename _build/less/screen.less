@@ -3,6 +3,9 @@
 @light-gray: #eee;
 @medium-gray: #666;
 @dark-gray: #333;
+@light-cream: #f0eae2;
+@blue: #4290c5;
+@dark-blue: #316B92;
 // ================= MIXINS ================= //
 .right{
   float:right;
@@ -74,6 +77,10 @@ nav{
       display: inline;
       a{
         text-decoration: none;
+        color: @blue;
+        &:hover{
+          color: @dark-blue;
+        }
       }
     }
   }

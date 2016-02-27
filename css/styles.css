@@ -64,6 +64,10 @@ nav ul li {
 }
 nav ul li a {
   text-decoration: none;
+  color: #4290c5;
+}
+nav ul li a:hover {
+  color: #316B92;
 }
 .clearfix:after {
   content: " ";
