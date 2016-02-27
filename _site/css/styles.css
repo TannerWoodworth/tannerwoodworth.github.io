@@ -47,12 +47,14 @@ main {
   color: #666;
   font-weight: bold;
   text-transform: capitalize;
+  margin-bottom: 0;
 }
 .info_block p {
   line-height: 1.4;
   color: #333;
   width: 50%;
   float: left;
+  margin-top: .5em;
 }
 #splash h2 {
   text-align: center;
