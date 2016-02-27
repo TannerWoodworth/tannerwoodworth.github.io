@@ -29,7 +29,7 @@ main {
   padding: .5em;
 }
 .info_block:nth-child(odd) {
-  background-color: #f0eae2;
+  background-color: #eee;
 }
 .info_block:nth-child(odd) img {
   float: right;
