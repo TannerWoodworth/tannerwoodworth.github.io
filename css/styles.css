@@ -150,6 +150,13 @@ main {
 }
 header {
   border-bottom: #eee solid 1px;
+  width: 80%;
+  max-width: 1000px;
+}
+@media only screen and (max-width: 680px) {
+  header {
+    width: 100%;
+  }
 }
 #logo {
   float: left;
