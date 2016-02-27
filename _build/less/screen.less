@@ -36,9 +36,12 @@ main{
   margin: 0 auto;
 }
 .info_block{
-  padding:.5em 0;
+  padding:.5em;
   &:nth-child(odd){
     background-color: @light-cream;
+    img{
+      float: right;
+    }
   }
   h3{
     color: @medium-gray;
@@ -50,9 +53,9 @@ main{
     width: 50%;
   }
   img{
-
+    float:left;
   }
-}
+} // info_block
 // ============== TYPOGRAPHY ============== //
 #splash{
   h2{
