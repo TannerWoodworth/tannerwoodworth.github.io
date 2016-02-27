@@ -1,1 +1,1 @@
-console.log("js working!!!!");
+console.log("main.js success"),console.log("js working!!!!");
