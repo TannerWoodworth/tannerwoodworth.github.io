@@ -146,10 +146,34 @@ header{
   margin: 0 auto;
   width: 80%;
   max-width: 1000px;
+  .mobile-nav{
+    display:none;
+  }
   @media only screen and (max-width : 680px){
     width: 100%;
+    border-bottom: none;
+    .mobile-nav{
+      color: @blue;
+      display:block;
+      text-align: center;
+      width: 90%;
+      margin: 1em auto 0 auto;
+      padding: 1em;
+      text-decoration: none;
+      font-weight: bold;
+      border: 2px solid @light-gray;
+    }
+    .mobile-nav:active{
+      background-color: @light-gray;
+    }
+    .expanded{
+      display:block;
+    }
+    .hidden{
+      display:none;
+      border-bottom: 0px !important;
+    }
   }
-
 }
 #logo{
   float:left;
@@ -159,9 +183,10 @@ header{
       display:block;
       margin: 0 auto;
       width: 100%;
-      max-width: 250px;
+      max-width: 150px;
     }
 }
+
 nav{
   color: #fff;
   float: left;
@@ -187,23 +212,29 @@ nav{
       }
     }
   }
+
   @media only screen and (max-width : 680px){
+    .nav-about{
+      border-bottom: none;
+    }
     width:100%;
     display:block;
     margin: 0 auto;
     ul{
       display: block;
-      margin:1em auto;
+      margin:1em auto 0 auto;
       width:90%;
       padding: 0px;
       li{
         display: block !important;
         width:100%;
-        margin: 0 auto;
+        margin: 1em auto 0 auto;
         border-bottom: 1px solid @light-gray;
         text-align: center;
         a{
-          margin: 5em 0;
+          display: block !important;
+          width:100%;
+          padding-bottom: 1em;
         }
       }
     }

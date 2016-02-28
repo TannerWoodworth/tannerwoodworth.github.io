@@ -1,1 +1,1 @@
-console.log("main.js success"),console.log("js working!!!!");
+function expandNav(e){event.preventDefault(),console.log(showing),1==showing?(console.log("was true"),document.getElementsByTagName("nav")[0].setAttribute("class","hidden"),showing=!1):0==showing&&(console.log("was false"),document.getElementsByTagName("nav")[0].setAttribute("class","show"),showing=!0)}console.log("main.js success");var showing=!1;console.log("js working!!!!");

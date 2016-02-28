@@ -156,9 +156,34 @@ header {
   width: 80%;
   max-width: 1000px;
 }
+header .mobile-nav {
+  display: none;
+}
 @media only screen and (max-width: 680px) {
   header {
     width: 100%;
+    border-bottom: none;
+  }
+  header .mobile-nav {
+    color: #4290c5;
+    display: block;
+    text-align: center;
+    width: 90%;
+    margin: 1em auto 0 auto;
+    padding: 1em;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #eee;
+  }
+  header .mobile-nav:active {
+    background-color: #eee;
+  }
+  header .expanded {
+    display: block;
+  }
+  header .hidden {
+    display: none;
+    border-bottom: 0px !important;
   }
 }
 #logo {
@@ -171,7 +196,7 @@ header {
     display: block;
     margin: 0 auto;
     width: 100%;
-    max-width: 250px;
+    max-width: 150px;
   }
 }
 nav {
@@ -202,21 +227,26 @@ nav ul li a:hover {
     display: block;
     margin: 0 auto;
   }
+  nav .nav-about {
+    border-bottom: none;
+  }
   nav ul {
     display: block;
-    margin: 1em auto;
+    margin: 1em auto 0 auto;
     width: 90%;
     padding: 0px;
   }
   nav ul li {
     display: block !important;
     width: 100%;
-    margin: 0 auto;
+    margin: 1em auto 0 auto;
     border-bottom: 1px solid #eee;
     text-align: center;
   }
   nav ul li a {
-    margin: 5em 0;
+    display: block !important;
+    width: 100%;
+    padding-bottom: 1em;
   }
 }
 .clearfix:after {
