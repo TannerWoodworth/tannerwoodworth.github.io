@@ -165,6 +165,15 @@ header {
   float: left;
   width: 150px;
 }
+@media only screen and (max-width: 680px) {
+  #logo {
+    float: none;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 250px;
+  }
+}
 nav {
   color: #fff;
   float: left;
@@ -186,6 +195,29 @@ nav ul li a {
 nav ul li a:hover {
   transition: all 0.4s ease;
   color: #316B92;
+}
+@media only screen and (max-width: 680px) {
+  nav {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+  nav ul {
+    display: block;
+    margin: 1em auto;
+    width: 90%;
+    padding: 0px;
+  }
+  nav ul li {
+    display: block !important;
+    width: 100%;
+    margin: 0 auto;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+  }
+  nav ul li a {
+    margin: 5em 0;
+  }
 }
 .clearfix:after {
   content: " ";
