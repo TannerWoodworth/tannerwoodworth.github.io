@@ -10,22 +10,25 @@ function expandNav (e){
     showing = true;
   };
 };
+function showHome (e){
+  document.getElementById('pg-build').setAttribute("class", "hide-section");
+  document.getElementById('pg-about').setAttribute("class", "hide-section");
+  document.getElementById('pg-cart').setAttribute("class", "hide-section");
+  document.getElementById('pg-home').setAttribute("class", "show-section animated fadeIn");
+}
 function showBuild (e){
-  console.log("build");
   document.getElementById('pg-home').setAttribute("class", "hide-section");
   document.getElementById('pg-about').setAttribute("class", "hide-section");
   document.getElementById('pg-cart').setAttribute("class", "hide-section");
   document.getElementById('pg-build').setAttribute("class", "show-section");
 }
 function showAbout (e){
-  console.log("about");
   document.getElementById('pg-home').setAttribute("class", "hide-section");
   document.getElementById('pg-build').setAttribute("class", "hide-section");
   document.getElementById('pg-cart').setAttribute("class", "hide-section");
   document.getElementById('pg-about').setAttribute("class", "show-section");
 }
 function showCart (e){
-  console.log("cart");
   document.getElementById('pg-home').setAttribute("class", "hide-section");
   document.getElementById('pg-about').setAttribute("class", "hide-section");
   document.getElementById('pg-build').setAttribute("class", "hide-section");
