@@ -12,14 +12,17 @@
   <a class="mobile-nav" href="#" onclick="expandNav();">MENU</a>
     <nav class="hidden">
       <ul class="clearfix">
-        <li class="nav-home {{ home-class }}">
+        <li class="nav-home first {{ home-class }}">
           <a href="index.html">Home</a>
         </li>
-        <li class="nav-setup first{{ setup-class }}">
-          <a href="setup.html">Get Started</a>
+        <li class="nav-build {{ build-class }}">
+          <a href="#" onclick="showBuild">Get Started</a>
         </li>
         <li class="nav-about {{ about-class }}">
-          <a href="about.html">About</a>
+          <a href="#" onclick="showAbout">About</a>
+        </li>
+        <li class="nav-cart {{ cart-class }}">
+          <a href="#" onclick="showCart">Cart</a>
         </li>
       </ul>
     </nav>
