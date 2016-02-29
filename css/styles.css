@@ -4,6 +4,16 @@
 .left {
   float: left;
 }
+.center_content {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 680px) {
+  .center_content {
+    width: 100%;
+  }
+}
 .hide-section {
   display: none !important;
 }
@@ -11,6 +21,8 @@
   display: block !important;
 }
 html {
+  transition: all 0.4s ease;
+  text-decoration: none;
   background-color: #fff;
   background-image: url(../images/site-bg.jpg);
   background-repeat: repeat;
@@ -187,12 +199,73 @@ main {
   width: 100%;
   height: 100%;
 }
+#get-started {
+  text-align: center;
+}
 #get-started h3 {
   display: block;
   width: 100%;
   margin: 1em auto;
   text-align: center;
   font-size: 2em;
+}
+#get-started a {
+  text-decoration: none;
+  color: #fff;
+  padding: 1em 2em;
+  border-radius: 5px;
+  display: block;
+  width: 50%;
+  max-width: 250px;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 680px) {
+  #get-started a {
+    display: block;
+    width: 100%;
+  }
+}
+#get-started .lets_go {
+  width: 50%;
+  display: inline;
+}
+#get-started .lets_go a {
+  transition: all 0.4s ease;
+  text-decoration: none;
+  float: left;
+  background-color: #4290c5;
+}
+#get-started .lets_go a:hover {
+  transition: all 0.4s ease;
+  text-decoration: none;
+  background-color: #316B92;
+}
+#get-started .learn_more {
+  width: 50%;
+  display: inline;
+}
+#get-started .learn_more a {
+  transition: all 0.4s ease;
+  text-decoration: none;
+  float: right;
+  background-color: #666;
+}
+#get-started .learn_more a:hover {
+  transition: all 0.4s ease;
+  text-decoration: none;
+  background-color: #333;
+}
+@media only screen and (max-width: 1150px) {
+  #get-started .lets_go,
+  #get-started .learn_more {
+    display: block;
+    width: 100%;
+  }
+  #get-started a {
+    float: none !important;
+    max-width: 281px;
+    margin: 0 auto 1em auto;
+  }
 }
 #splash h2 {
   font-size: 4em;
