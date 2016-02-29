@@ -13,3 +13,12 @@ function expandNav (e){
     showing = true;
   };
 };
+function showBuild (e){
+
+}
+function showAbout (e){
+
+}
+function showCart (e){
+
+}
