@@ -13,6 +13,7 @@
 .left {
   float: left;
 }
+
 // =============== SEMANTIC ================ //
 .hide-section {
   display: none !important;
@@ -136,20 +137,16 @@ main {
 }
 // info_block
 #video {
-  .body_copy;
   p {
+    line-height: 1.4em;
     width: 80%;
     margin: 1em auto;
     @media only screen and (max-width : 680px){
       width:100%;
     }
   }
-  h3 {
-    display: block;
-    width: 100%;
-    margin: 1em auto;
-    text-align: center;
-    font-size: 2em;
+  h3{
+    .center-title
   }
   .embed-container {
     position: relative;
@@ -173,6 +170,11 @@ main {
     height: 100%;
   }
 }
+#get-started{
+  h3{
+    .center-title;
+  }
+}
 // ============== TYPOGRAPHY ============== //
 #splash {
   h2 {
@@ -184,6 +186,13 @@ main {
 .body_copy {
   line-height: 1.4;
   color: @dark-gray;
+}
+.center-title {
+    display: block;
+    width: 100%;
+    margin: 1em auto;
+    text-align: center;
+    font-size: 2em;
 }
 // ============== NAVIGATION ============= //
 header {
