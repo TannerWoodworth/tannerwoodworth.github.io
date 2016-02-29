@@ -181,9 +181,6 @@ header .mobile-nav {
     font-weight: bold;
     border: 2px solid #eee;
   }
-  header .mobile-nav:active {
-    background-color: #eee;
-  }
   header .expanded {
     display: block;
   }
