@@ -4,6 +4,12 @@
 .left {
   float: left;
 }
+.hide-section {
+  display: none !important;
+}
+.show-section {
+  display: block !important;
+}
 html {
   background-color: #fff;
   background-image: url(../images/site-bg.jpg);
