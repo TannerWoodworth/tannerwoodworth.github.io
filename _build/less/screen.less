@@ -7,20 +7,20 @@
 @blue: #4290c5;
 @dark-blue: #316B92;
 // ================= MIXINS ================= //
-.right{
-  float:right;
+.right {
+  float: right;
 }
-.left{
-  float:left;
+.left {
+  float: left;
 }
 // =============== SEMANTIC ================ //
-.hide-section{
-  display:none !important;
+.hide-section {
+  display: none !important;
 }
-.show-section{
+.show-section {
   display: block !important;
 }
-html{
+html {
   background-color: #fff;
   background-image: url(../images/site-bg.jpg);
   background-repeat: repeat;
@@ -31,73 +31,73 @@ html{
 body {
   background-color: rgba(255,255,255,.9);
   margin: 0 auto;
-  padding: .5em .5em 0 .5em;
+  padding: 0.5em 0.5em 0;
 }
-footer{
-  color:@medium-gray;
-  padding: .5em 0;
+footer {
+  color: @medium-gray;
+  padding: 0.5em 0;
   text-align: center;
 }
-main{
-  width:80%;
-  max-width:1000px;
-  padding: 1em .5em;
+main {
+  width: 80%;
+  max-width: 1000px;
+  padding: 1em 0.5em;
   margin: 0 auto;
-  @media only screen and (max-width : 680px){
-    width:90%;
+  @media only screen and (max-width : 680px) {
+    width: 90%;
   }
 }
-.info_block{
-  padding: 1em .5em;
-  &:nth-child(odd){
+.info_block {
+  padding: 1em 0.5em;
+  &:nth-child(odd) {
     background-color: @light-gray;
-    @media only screen and (max-width : 680px){
-      background-color:#fff;
+    @media only screen and (max-width : 680px) {
+      background-color: #fff;
     }
-    img{
+    img {
       float: right;
-      margin-left:1em;
-      width:40%;
-      max-width:350px;
-      @media only screen and (max-width : 680px){
-        display:block;
+      margin-left: 1em;
+      width: 40%;
+      max-width: 350px;
+      @media only screen and (max-width : 680px) {
+        display: block;
         width: 100%;
         padding: 0;
         margin: 0 auto;
         float: none;
       }
     }
-    p{
+    p {
       margin-left: 5em;
-      @media only screen and (max-width : 1100px){
+      @media only screen and (max-width : 1100px) {
         margin-left: 1em;
       }
-      @media only screen and (max-width : 680px){
+      @media only screen and (max-width : 680px) {
         float: none;
         margin-left: 0;
       }
     }
-    h3{
+    h3 {
       margin-left: 4.3em;
-      @media only screen and (max-width : 1100px){
+      @media only screen and (max-width : 1100px) {
         margin-left: 1em;
       }
-      @media only screen and (max-width : 680px){
+      @media only screen and (max-width : 680px) {
         float: none;
         margin-left: 0;
         margin-top: 1em;
       }
     }
   }
-  &:nth-child(even){
-    img{
-      float:left;
+  &:nth-child(even) {
+    img {
+      float: left;
       margin-right: 1em;
       margin-left: -.5em;
-      width:40%;
-      max-width:350px;
-      @media only screen and (max-width : 680px){
-        display:block;
+      width: 40%;
+      max-width: 350px;
+      @media only screen and (max-width : 680px) {
+        display: block;
         width: 100%;
         padding: 0;
         margin: 0 auto;
@@ -105,108 +105,146 @@ main{
       }
     }
   }
-  h3{
+  h3 {
     color: @dark-gray;
     font-weight: bold;
     text-transform: capitalize;
-    margin-bottom:0;
-    @media only screen and (max-width : 680px){
+    margin-bottom: 0;
+    @media only screen and (max-width : 680px) {
       margin-top: 1em;
     }
   }
-  p{
+  p {
     .body_copy;
     width: 45%;
     float: left;
-    margin: .5em 0 0 0;
+    margin: 0.5em 0 0;
+    @media only screen and (max-width : 680px) {
+      width: 100%;
+    }
+  }
+  .text_content {
+    margin-top: 4em;
+    @media only screen and (max-width : 1100px) {
+      margin-top: -1em;
+    }
+    @media only screen and (max-width : 680px) {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+// info_block
+#video {
+  .body_copy;
+  p {
+    width: 80%;
+    margin: 1em auto;
     @media only screen and (max-width : 680px){
       width:100%;
     }
   }
-  .text_content{
-    margin-top: 4em;
-    @media only screen and (max-width : 1100px){
-      margin-top: -1em;
-    }
+  h3 {
+    display: block;
+    width: 100%;
+    margin: 1em auto;
+    text-align: center;
+    font-size: 2em;
+  }
+  .embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 80%;
+    margin: 0 auto;
     @media only screen and (max-width : 680px){
-      display:block;
       width: 100%;
+      max-width:100%;
     }
   }
-} // info_block
+  .embed-container iframe,
+  .embed-container object,
+  .embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
 // ============== TYPOGRAPHY ============== //
-#splash{
-  h2{
+#splash {
+  h2 {
     font-size: 4em;
     text-align: center;
     font-weight: bold;
   }
 }
-.body_copy{
+.body_copy {
   line-height: 1.4;
   color: @dark-gray;
 }
 // ============== NAVIGATION ============= //
-header{
+header {
   border-bottom: @light-gray solid 1px;
   margin: 0 auto;
   width: 80%;
   max-width: 1000px;
-  .mobile-nav{
-    display:none;
+  .mobile-nav {
+    display: none;
   }
-  @media only screen and (max-width : 680px){
+  @media only screen and (max-width : 680px) {
     width: 100%;
     border-bottom: none;
-    .mobile-nav{
+    .mobile-nav {
       color: @blue;
-      display:block;
+      display: block;
       text-align: center;
       width: 90%;
-      margin: 1em auto 0 auto;
+      margin: 1em auto 0;
       padding: 1em;
       text-decoration: none;
       font-weight: bold;
       border: 2px solid @light-gray;
     }
-    .expanded{
-      display:block;
+    .expanded {
+      display: block;
     }
-    .hidden{
-      display:none;
-      border-bottom: 0px !important;
+    .hidden {
+      display: none;
+      border-bottom: 0 !important;
     }
   }
 }
-#logo{
-  float:left;
+#logo {
+  float: left;
   width: 150px;
-    @media only screen and (max-width : 680px){
-      float:none;
-      display:block;
-      margin: 0 auto;
-      width: 100%;
-      max-width: 150px;
-    }
+  @media only screen and (max-width : 680px) {
+    float: none;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 150px;
+  }
 }
-
-nav{
+nav {
   color: #fff;
   float: left;
-  width:60%;
-  ul{
+  width: 60%;
+  ul {
     list-style-type: none;
-    margin: .5em 0 1em 0;
-    li{
+    margin: 0.5em 0 1em;
+    li {
       display: inline;
-      padding-right: .5em;
-      a{
+      padding-right: 0.5em;
+      a {
         -webkit-transition: all 0.4s ease;
         -moz-transition: all 0.4s ease;
         transition: all 0.4s ease;
         text-decoration: none;
         color: @blue;
-        &:hover{
+        &:hover {
           -webkit-transition: all 0.4s ease;
           -moz-transition: all 0.4s ease;
           transition: all 0.4s ease;
@@ -215,28 +253,27 @@ nav{
       }
     }
   }
-
-  @media only screen and (max-width : 680px){
-    .nav-cart{
+  @media only screen and (max-width : 680px) {
+    .nav-cart {
       border-bottom: none;
     }
-    width:100%;
-    display:block;
+    width: 100%;
+    display: block;
     margin: 0 auto;
-    ul{
+    ul {
       display: block;
-      margin:1em auto 0 auto;
-      width:90%;
-      padding: 0px;
-      li{
+      margin: 1em auto 0;
+      width: 90%;
+      padding: 0;
+      li {
         display: block !important;
-        width:100%;
-        margin: 1em auto 0 auto;
+        width: 100%;
+        margin: 1em auto 0;
         border-bottom: 1px solid @light-gray;
         text-align: center;
-        a{
+        a {
           display: block !important;
-          width:100%;
+          width: 100%;
           padding-bottom: 1em;
         }
       }
@@ -245,9 +282,10 @@ nav{
 }
 // ============== CLEARFIX ============= //
 .clearfix:after {
-   content: " "; /* Older browser do not support empty content */
-   visibility: hidden;
-   display: block;
-   height: 0;
-   clear: both;
+  content: " ";
+  /* Older browser do not support empty content */
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
 }
