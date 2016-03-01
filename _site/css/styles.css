@@ -55,7 +55,7 @@ main {
   padding: 1em 0.5em;
 }
 .info_block:nth-child(odd) {
-  background-color: #eee;
+  background-color: #ccc;
 }
 @media only screen and (max-width: 680px) {
   .info_block:nth-child(odd) {
@@ -284,7 +284,7 @@ main {
   font-size: 2em;
 }
 header {
-  border-bottom: #eee solid 1px;
+  border-bottom: #ccc solid 1px;
   margin: 0 auto;
   width: 80%;
   max-width: 1000px;
@@ -306,7 +306,7 @@ header .mobile-nav {
     padding: 1em;
     text-decoration: none;
     font-weight: bold;
-    border: 2px solid #eee;
+    border: 2px solid #ccc;
   }
   header .expanded {
     display: block;
@@ -370,7 +370,7 @@ nav ul li a:hover {
     display: block !important;
     width: 100%;
     margin: 1em auto 0;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #ccc;
     text-align: center;
   }
   nav ul li a {
@@ -387,15 +387,15 @@ main > h3 {
 }
 .group .group-item {
   display: inline-block;
-  border: 2px solid #eee;
+  border: 1px solid #ccc;
   background-color: #fff;
-  width: 28%;
+  width: 29%;
   height: 175px;
   padding: 1em;
   margin-bottom: 1em;
 }
 .group .group-item:hover .group-info {
-  background-color: #eee;
+  background-color: #ccc;
 }
 .group .group-item .group-info p {
   font-weight: bold;
