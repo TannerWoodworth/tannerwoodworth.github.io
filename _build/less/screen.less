@@ -366,6 +366,38 @@ nav {
     }
   }
 }
+main > h3{
+  float:left;
+}
+.group{
+
+  padding: .5em;
+  .group-item{
+    display: inline-block;
+    border: 2px solid @light-gray;
+    background-color: #fff;
+    width: 28%;
+    height: 175px;
+    padding:1em;
+    margin-bottom:1em;
+    &:hover{
+      .group-info{
+        background-color: @light-gray;
+      }
+    }
+    .group-info{
+      p{
+        font-weight: bold;
+      }
+    }
+  }
+  .stretch {
+    width: 100%;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0
+}
+}
 // ============== CLEARFIX ============= //
 .clearfix:after {
   content: " ";

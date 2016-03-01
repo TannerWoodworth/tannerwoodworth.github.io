@@ -379,6 +379,33 @@ nav ul li a:hover {
     padding-bottom: 1em;
   }
 }
+main > h3 {
+  float: left;
+}
+.group {
+  padding: .5em;
+}
+.group .group-item {
+  display: inline-block;
+  border: 2px solid #eee;
+  background-color: #fff;
+  width: 28%;
+  height: 175px;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+.group .group-item:hover .group-info {
+  background-color: #eee;
+}
+.group .group-item .group-info p {
+  font-weight: bold;
+}
+.group .stretch {
+  width: 100%;
+  display: inline-block;
+  font-size: 0;
+  line-height: 0;
+}
 .clearfix:after {
   content: " ";
   /* Older browser do not support empty content */
