@@ -1,1 +1,352 @@
-function expandNav(t){event.preventDefault(),1==showing?(document.getElementsByTagName("nav")[0].setAttribute("class","hidden"),showing=!1):0==showing&&(document.getElementsByTagName("nav")[0].setAttribute("class","show"),showing=!0)}function showHome(t){document.getElementById("pg-build").setAttribute("class","hide-section"),document.getElementById("pg-about").setAttribute("class","hide-section"),document.getElementById("pg-cart").setAttribute("class","hide-section"),document.getElementById("pg-home").setAttribute("class","show-section animated fadeIn"),showing=!1}function showBuild(t){document.getElementById("pg-home").setAttribute("class","hide-section"),document.getElementById("pg-about").setAttribute("class","hide-section"),document.getElementById("pg-cart").setAttribute("class","hide-section"),document.getElementById("pg-build").setAttribute("class","show-section"),showing=!1}function showAbout(t){document.getElementById("pg-home").setAttribute("class","hide-section"),document.getElementById("pg-build").setAttribute("class","hide-section"),document.getElementById("pg-cart").setAttribute("class","hide-section"),document.getElementById("pg-about").setAttribute("class","show-section"),showing=!1}function showCart(t){document.getElementById("pg-home").setAttribute("class","hide-section"),document.getElementById("pg-about").setAttribute("class","hide-section"),document.getElementById("pg-build").setAttribute("class","hide-section"),document.getElementById("pg-cart").setAttribute("class","show-section"),showing=!1}var showing=!1;!function(t){t(document).ready(function(){t(this).hcCharts(),Highcharts.setOptions({lang:{thousandsSep:","}})}),jQuery.fn.hcCharts=function(){function e(t,e){for(var n=0;n<t.series.length;n++)for(var i=t.series[n].userOptions.borderColor,o=0;o<t.series[n].points.length;o++)if(0!=t.series[n].points[o].y&&t.series[n].visible){var s=2,r=t.series[n].points[o].shapeArgs.width,l=t.series[n].points[o].shapeArgs.height,a=t.plotTop+t.plotHeight-t.series[n].points[o].shapeArgs.x-r,u=t.plotLeft+l;t.renderer.rect(u,a,s,r,0).attr({fill:i,"stroke-width":1,stroke:i,zIndex:3,"class":"custom-remove bar-chart-rect"}).add()}}var n="#E9B841",i="#E0A82B",o="#E08126",s="#D16F1E",r="#D85932",l="#D34626",a="#307690",u="#255C70",c={lang:{thousandsSep:","},title:{text:null},subtitle:{text:null},credits:{enabled:!1},"export":{enabled:!1},chart:{spacing:[20,20,20,20]}};t(".chart-bar-h").doesExist()&&t(".chart-bar-h").each(function(h,d){var p=t(d),m="75%",f=p.data("chartsettings");f=jQuery.fn.userOpts(f);var y={chart:{type:"bar",events:{load:function(){e(this,f)},redraw:function(){p.find(".custom-remove").remove(),e(this,f)}}},xAxis:{tickLength:0,gridLineWidth:1,title:{text:null},labels:{style:{fontSize:16,color:"#676767",marginBottom:10}}},legend:{enabled:!0},yAxis:[{gridLineColor:"#bcbdbf",minorGridLineColor:"#DADCDB",gridLineWidth:3,minorGridLineWidth:1,title:{text:""},labels:{align:"center",style:{color:"#a1a2a4",fontSize:13}}},{gridLineColor:"#bcbdbf",minorGridLineColor:"#DADCDB",gridLineWidth:3,minorGridLineWidth:1,opposite:!0,title:{text:""},labels:{align:"center",style:{color:"#a1a2a4",fontSize:13}}}],plotOptions:{bar:{dataLabels:{enabled:!0,useHTML:!0,formatter:function(){return 0==this.point.y?'<img style="width: 10px; height: 10px;" src="'+f.zeroImage+'"/>':void 0}}},series:{pointPadding:.05,groupPadding:.15}}};f.hasLegend?y.legend={layout:"horizontal",align:"right",verticalAlign:"top",x:0,y:0,floating:!1,borderWidth:0,shadow:!1}:y.legend.enabled=!1;var g=p.data("datatype");if("percent"==g&&(y.yAxis[0].labels.format="{value}%",y.yAxis[0].min=0,y.yAxis[0].max=100,y.yAxis[0].minorTickInterval=10,y.yAxis[0].tickInterval=50,y.yAxis[1].labels.format="{value}%",y.yAxis[1].min=0,y.yAxis[1].max=100,y.yAxis[1].minorTickInterval=10,y.yAxis[1].tickInterval=50),"numeric"==g){for(var v=[],b=[],A=0,w=0,x=0;x<f.series.length;x++)v[x]=Math.max.apply(null,f.series[x].data),b[x]=Math.min.apply(null,f.series[x].data);A=Math.max.apply(null,v),w=Math.max.apply(null,b),A+=.1*A,w-=.1*w;var E=5*Math.round(Math.ceil(Math.sqrt(A))/5);y.yAxis[0].gridLineWidth=1,y.yAxis[0].tickInterval=E,y.yAxis[0].min=w,y.yAxis[0].max=A,y.yAxis[1].gridLineWidth=1,y.yAxis[1].tickInterval=E,y.yAxis[1].min=w,y.yAxis[1].max=A}var C=p.data("charttype");"bartricolor"==C&&(y.series=[{},{},{}],y.series[0].color=n,y.series[0].borderColor=i,y.series[1].color=o,y.series[1].borderColor=s,y.series[2].color=r,y.series[2].borderColor=l),"barbluesingle"==C&&(y.series=[{}],y.series[0].color=a,y.series[0].borderColor=u,y.yAxis[0].labels.format="{value}",y.yAxis[1].labels.format="{value}");var S=t.extend(!0,{},c,y,f);jQuery.fn.hcChartsRender(p,S,m)})},jQuery.fn.doesExist=function(){return jQuery(this).length>0}}(jQuery),console.log("js working!!!!"),function(){var t,e,n,i,o,s=function(t,e){return function(){return t.apply(e,arguments)}},r=[].indexOf||function(t){for(var e=0,n=this.length;n>e;e++)if(e in this&&this[e]===t)return e;return-1};e=function(){function t(){}return t.prototype.extend=function(t,e){var n,i;for(n in e)i=e[n],null==t[n]&&(t[n]=i);return t},t.prototype.isMobile=function(t){return/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(t)},t.prototype.createEvent=function(t,e,n,i){var o;return null==e&&(e=!1),null==n&&(n=!1),null==i&&(i=null),null!=document.createEvent?(o=document.createEvent("CustomEvent"),o.initCustomEvent(t,e,n,i)):null!=document.createEventObject?(o=document.createEventObject(),o.eventType=t):o.eventName=t,o},t.prototype.emitEvent=function(t,e){return null!=t.dispatchEvent?t.dispatchEvent(e):e in(null!=t)?t[e]():"on"+e in(null!=t)?t["on"+e]():void 0},t.prototype.addEvent=function(t,e,n){return null!=t.addEventListener?t.addEventListener(e,n,!1):null!=t.attachEvent?t.attachEvent("on"+e,n):t[e]=n},t.prototype.removeEvent=function(t,e,n){return null!=t.removeEventListener?t.removeEventListener(e,n,!1):null!=t.detachEvent?t.detachEvent("on"+e,n):delete t[e]},t.prototype.innerHeight=function(){return"innerHeight"in window?window.innerHeight:document.documentElement.clientHeight},t}(),n=this.WeakMap||this.MozWeakMap||(n=function(){function t(){this.keys=[],this.values=[]}return t.prototype.get=function(t){var e,n,i,o,s;for(s=this.keys,e=i=0,o=s.length;o>i;e=++i)if(n=s[e],n===t)return this.values[e]},t.prototype.set=function(t,e){var n,i,o,s,r;for(r=this.keys,n=o=0,s=r.length;s>o;n=++o)if(i=r[n],i===t)return void(this.values[n]=e);return this.keys.push(t),this.values.push(e)},t}()),t=this.MutationObserver||this.WebkitMutationObserver||this.MozMutationObserver||(t=function(){function t(){"undefined"!=typeof console&&null!==console&&console.warn("MutationObserver is not supported by your browser."),"undefined"!=typeof console&&null!==console&&console.warn("WOW.js cannot detect dom mutations, please call .sync() after loading new content.")}return t.notSupported=!0,t.prototype.observe=function(){},t}()),i=this.getComputedStyle||function(t){return this.getPropertyValue=function(e){var n;return"float"===e&&(e="styleFloat"),o.test(e)&&e.replace(o,function(t,e){return e.toUpperCase()}),(null!=(n=t.currentStyle)?n[e]:void 0)||null},this},o=/(\-([a-z]){1})/g,this.WOW=function(){function o(t){null==t&&(t={}),this.scrollCallback=s(this.scrollCallback,this),this.scrollHandler=s(this.scrollHandler,this),this.resetAnimation=s(this.resetAnimation,this),this.start=s(this.start,this),this.scrolled=!0,this.config=this.util().extend(t,this.defaults),null!=t.scrollContainer&&(this.config.scrollContainer=document.querySelector(t.scrollContainer)),this.animationNameCache=new n,this.wowEvent=this.util().createEvent(this.config.boxClass)}return o.prototype.defaults={boxClass:"wow",animateClass:"animated",offset:0,mobile:!0,live:!0,callback:null,scrollContainer:null},o.prototype.init=function(){var t;return this.element=window.document.documentElement,"interactive"===(t=document.readyState)||"complete"===t?this.start():this.util().addEvent(document,"DOMContentLoaded",this.start),this.finished=[]},o.prototype.start=function(){var e,n,i,o;if(this.stopped=!1,this.boxes=function(){var t,n,i,o;for(i=this.element.querySelectorAll("."+this.config.boxClass),o=[],t=0,n=i.length;n>t;t++)e=i[t],o.push(e);return o}.call(this),this.all=function(){var t,n,i,o;for(i=this.boxes,o=[],t=0,n=i.length;n>t;t++)e=i[t],o.push(e);return o}.call(this),this.boxes.length)if(this.disabled())this.resetStyle();else for(o=this.boxes,n=0,i=o.length;i>n;n++)e=o[n],this.applyStyle(e,!0);return this.disabled()||(this.util().addEvent(this.config.scrollContainer||window,"scroll",this.scrollHandler),this.util().addEvent(window,"resize",this.scrollHandler),this.interval=setInterval(this.scrollCallback,50)),this.config.live?new t(function(t){return function(e){var n,i,o,s,r;for(r=[],n=0,i=e.length;i>n;n++)s=e[n],r.push(function(){var t,e,n,i;for(n=s.addedNodes||[],i=[],t=0,e=n.length;e>t;t++)o=n[t],i.push(this.doSync(o));return i}.call(t));return r}}(this)).observe(document.body,{childList:!0,subtree:!0}):void 0},o.prototype.stop=function(){return this.stopped=!0,this.util().removeEvent(this.config.scrollContainer||window,"scroll",this.scrollHandler),this.util().removeEvent(window,"resize",this.scrollHandler),null!=this.interval?clearInterval(this.interval):void 0},o.prototype.sync=function(){return t.notSupported?this.doSync(this.element):void 0},o.prototype.doSync=function(t){var e,n,i,o,s;if(null==t&&(t=this.element),1===t.nodeType){for(t=t.parentNode||t,o=t.querySelectorAll("."+this.config.boxClass),s=[],n=0,i=o.length;i>n;n++)e=o[n],r.call(this.all,e)<0?(this.boxes.push(e),this.all.push(e),this.stopped||this.disabled()?this.resetStyle():this.applyStyle(e,!0),s.push(this.scrolled=!0)):s.push(void 0);return s}},o.prototype.show=function(t){return this.applyStyle(t),t.className=t.className+" "+this.config.animateClass,null!=this.config.callback&&this.config.callback(t),this.util().emitEvent(t,this.wowEvent),this.util().addEvent(t,"animationend",this.resetAnimation),this.util().addEvent(t,"oanimationend",this.resetAnimation),this.util().addEvent(t,"webkitAnimationEnd",this.resetAnimation),this.util().addEvent(t,"MSAnimationEnd",this.resetAnimation),t},o.prototype.applyStyle=function(t,e){var n,i,o;return i=t.getAttribute("data-wow-duration"),n=t.getAttribute("data-wow-delay"),o=t.getAttribute("data-wow-iteration"),this.animate(function(s){return function(){return s.customStyle(t,e,i,n,o)}}(this))},o.prototype.animate=function(){return"requestAnimationFrame"in window?function(t){return window.requestAnimationFrame(t)}:function(t){return t()}}(),o.prototype.resetStyle=function(){var t,e,n,i,o;for(i=this.boxes,o=[],e=0,n=i.length;n>e;e++)t=i[e],o.push(t.style.visibility="visible");return o},o.prototype.resetAnimation=function(t){var e;return t.type.toLowerCase().indexOf("animationend")>=0?(e=t.target||t.srcElement,e.className=e.className.replace(this.config.animateClass,"").trim()):void 0},o.prototype.customStyle=function(t,e,n,i,o){return e&&this.cacheAnimationName(t),t.style.visibility=e?"hidden":"visible",n&&this.vendorSet(t.style,{animationDuration:n}),i&&this.vendorSet(t.style,{animationDelay:i}),o&&this.vendorSet(t.style,{animationIterationCount:o}),this.vendorSet(t.style,{animationName:e?"none":this.cachedAnimationName(t)}),t},o.prototype.vendors=["moz","webkit"],o.prototype.vendorSet=function(t,e){var n,i,o,s;i=[];for(n in e)o=e[n],t[""+n]=o,i.push(function(){var e,i,r,l;for(r=this.vendors,l=[],e=0,i=r.length;i>e;e++)s=r[e],l.push(t[""+s+n.charAt(0).toUpperCase()+n.substr(1)]=o);return l}.call(this));return i},o.prototype.vendorCSS=function(t,e){var n,o,s,r,l,a;for(l=i(t),r=l.getPropertyCSSValue(e),s=this.vendors,n=0,o=s.length;o>n;n++)a=s[n],r=r||l.getPropertyCSSValue("-"+a+"-"+e);return r},o.prototype.animationName=function(t){var e;try{e=this.vendorCSS(t,"animation-name").cssText}catch(n){e=i(t).getPropertyValue("animation-name")}return"none"===e?"":e},o.prototype.cacheAnimationName=function(t){return this.animationNameCache.set(t,this.animationName(t))},o.prototype.cachedAnimationName=function(t){return this.animationNameCache.get(t)},o.prototype.scrollHandler=function(){return this.scrolled=!0},o.prototype.scrollCallback=function(){var t;return!this.scrolled||(this.scrolled=!1,this.boxes=function(){var e,n,i,o;for(i=this.boxes,o=[],e=0,n=i.length;n>e;e++)t=i[e],t&&(this.isVisible(t)?this.show(t):o.push(t));return o}.call(this),this.boxes.length||this.config.live)?void 0:this.stop()},o.prototype.offsetTop=function(t){for(var e;void 0===t.offsetTop;)t=t.parentNode;for(e=t.offsetTop;t=t.offsetParent;)e+=t.offsetTop;return e},o.prototype.isVisible=function(t){var e,n,i,o,s;return n=t.getAttribute("data-wow-offset")||this.config.offset,s=this.config.scrollContainer&&this.config.scrollContainer.scrollTop||window.pageYOffset,o=s+Math.min(this.element.clientHeight,this.util().innerHeight())-n,i=this.offsetTop(t),e=i+t.clientHeight,o>=i&&e>=s},o.prototype.util=function(){return null!=this._util?this._util:this._util=new e},o.prototype.disabled=function(){return!this.config.mobile&&this.util().isMobile(navigator.userAgent)},o}()}.call(this);
+/**
+ *
+ * NAVIGATION
+ *
+ **/
+var showing = false;
+
+function expandNav(e) {
+  event.preventDefault();
+  if (showing == true) {
+    document.getElementsByTagName("nav")[0].setAttribute("class", "hidden");
+    showing = false;
+  } else if (showing == false) {
+    document.getElementsByTagName("nav")[0].setAttribute("class", "show");
+    showing = true;
+  };
+};
+
+function showHome(e) {
+  document.getElementById('pg-build').setAttribute("class", "hide-section");
+  document.getElementById('pg-about').setAttribute("class", "hide-section");
+  document.getElementById('pg-cart').setAttribute("class", "hide-section");
+  document.getElementById('pg-home').setAttribute("class", "show-section animated fadeIn");
+  showing = false;
+}
+
+function showBuild(e) {
+  document.getElementById('pg-home').setAttribute("class", "hide-section");
+  document.getElementById('pg-about').setAttribute("class", "hide-section");
+  document.getElementById('pg-cart').setAttribute("class", "hide-section");
+  document.getElementById('pg-build').setAttribute("class", "show-section");
+  showing = false;
+}
+
+function showAbout(e) {
+  document.getElementById('pg-home').setAttribute("class", "hide-section");
+  document.getElementById('pg-build').setAttribute("class", "hide-section");
+  document.getElementById('pg-cart').setAttribute("class", "hide-section");
+  document.getElementById('pg-about').setAttribute("class", "show-section");
+  showing = false;
+}
+
+function showCart(e) {
+  document.getElementById('pg-home').setAttribute("class", "hide-section");
+  document.getElementById('pg-about').setAttribute("class", "hide-section");
+  document.getElementById('pg-build').setAttribute("class", "hide-section");
+  document.getElementById('pg-cart').setAttribute("class", "show-section");
+  showing = false;
+}
+/**
+ *
+ * HIGHCHARTS
+ *
+ **/
+(function($) {
+  $(document).ready(function() {
+    $(this).hcCharts();
+    Highcharts.setOptions({
+      lang: {
+        thousandsSep: ',',
+      }
+    });
+  });
+  //================================
+  // Highcharts Charts
+  //================================
+  jQuery.fn.hcCharts = function() {
+    // Colors
+    var cYellow = "#E9B841",
+      cDarkYellow = "#E0A82B",
+      cOrange = "#E08126",
+      cDarkOrange = "#D16F1E",
+      cRed = "#D85932",
+      cDarkRed = "#D34626",
+      cBlue = "#307690",
+      cDarkBlue = "#255C70";
+
+    var sharedOpts = {
+      lang: {
+        thousandsSep: ',',
+      },
+      title: {
+        text: null,
+      },
+      subtitle: {
+        text: null,
+      },
+      credits: {
+        enabled: false,
+      },
+      export: {
+        enabled: false,
+      },
+      chart: {
+        spacing: [20, 20, 20, 20],
+      }
+    };
+    /*======== Bar Chart =========*/
+    if ($('.chart-bar-h').doesExist()) {
+      $('.chart-bar-h').each(function(index, el) {
+        var chart = $(el);
+        var waypointOffset = '75%';
+        var userOpts = chart.data('chartsettings');
+        userOpts = jQuery.fn.userOpts(userOpts);
+        var chartoptns = {
+          chart: {
+            type: 'bar',
+            events: {
+              load: function() {
+                bar_postrender(this, userOpts);
+              },
+              redraw: function() {
+                chart.find('.custom-remove').remove();
+                bar_postrender(this, userOpts);
+              }
+            }
+          },
+          xAxis: {
+            tickLength: 0,
+            gridLineWidth: 1,
+            title: {
+              text: null
+            },
+            labels: {
+              style: {
+                fontSize: 16,
+                color: '#676767',
+                marginBottom: 10,
+              }
+            }
+          },
+          legend: {
+            enabled: true,
+          },
+          yAxis: [{
+            gridLineColor: '#bcbdbf',
+            minorGridLineColor: '#DADCDB',
+            gridLineWidth: 3,
+            minorGridLineWidth: 1,
+            title: {
+              text: '',
+            },
+            labels: {
+              align: 'center',
+              style: {
+                color: '#a1a2a4',
+                fontSize: 13,
+              }
+            },
+          }, {
+            gridLineColor: '#bcbdbf',
+            minorGridLineColor: '#DADCDB',
+            gridLineWidth: 3,
+            minorGridLineWidth: 1,
+            opposite: true,
+            title: {
+              text: '',
+            },
+            labels: {
+              align: 'center',
+              style: {
+                color: '#a1a2a4',
+                fontSize: 13,
+              }
+            },
+          }],
+          plotOptions: {
+            bar: {
+              dataLabels: {
+                enabled: true,
+                useHTML: true,
+                formatter: function() {
+                  if (this.point.y == 0) {
+                    return '<img style="width: 10px; height: 10px;" src="' + userOpts.zeroImage + '"/>';
+                  };
+                },
+              },
+            },
+            series: {
+              pointPadding: 0.05,
+              groupPadding: 0.15,
+            }
+          }
+        };
+
+        //Define Chart Legend
+        if (userOpts.hasLegend) {
+          chartoptns.legend = {
+            layout: 'horizontal',
+            align: 'right',
+            verticalAlign: 'top',
+            x: 0,
+            y: 0,
+            floating: false,
+            borderWidth: 0,
+            shadow: false,
+          }
+        } else {
+          chartoptns.legend.enabled = false;
+        }
+
+        //Datatype Overrides
+        var datatype = chart.data('datatype');
+        if (datatype == 'percent') {
+          chartoptns.yAxis[0].labels.format = '{value}%';
+          chartoptns.yAxis[0].min = 0;
+          chartoptns.yAxis[0].max = 100;
+          chartoptns.yAxis[0].minorTickInterval = 10;
+          chartoptns.yAxis[0].tickInterval = 50;
+          //Opposite
+          chartoptns.yAxis[1].labels.format = '{value}%';
+          chartoptns.yAxis[1].min = 0;
+          chartoptns.yAxis[1].max = 100;
+          chartoptns.yAxis[1].minorTickInterval = 10;
+          chartoptns.yAxis[1].tickInterval = 50;
+        }
+        if (datatype == 'numeric') {
+          var maxValArray = [];
+          var minValArray = [];
+          var maxVal = 0;
+          var minVal = 0;
+          for (var i = 0; i < userOpts.series.length; i++) {
+            maxValArray[i] = Math.max.apply(null, userOpts.series[i].data);
+            minValArray[i] = Math.min.apply(null, userOpts.series[i].data);
+          }
+          maxVal = Math.max.apply(null, maxValArray);
+          minVal = Math.max.apply(null, minValArray);
+          maxVal = maxVal + (maxVal * .1);
+          minVal = minVal - (minVal * .1);
+          var tickInt = 5 * (Math.round(Math.ceil(Math.sqrt(maxVal)) / 5));
+          chartoptns.yAxis[0].gridLineWidth = 1;
+          chartoptns.yAxis[0].tickInterval = tickInt;
+          chartoptns.yAxis[0].min = minVal;
+          chartoptns.yAxis[0].max = maxVal;
+          //Opposite
+          chartoptns.yAxis[1].gridLineWidth = 1;
+          chartoptns.yAxis[1].tickInterval = tickInt;
+          chartoptns.yAxis[1].min = minVal;
+          chartoptns.yAxis[1].max = maxVal;
+        }
+
+        //Chartype Overrides
+        var charttype = chart.data('charttype');
+        if (charttype == 'bartricolor') {
+          chartoptns.series = [{}, {}, {}];
+          chartoptns.series[0].color = cYellow;
+          chartoptns.series[0].borderColor = cDarkYellow;
+          chartoptns.series[1].color = cOrange;
+          chartoptns.series[1].borderColor = cDarkOrange;
+          chartoptns.series[2].color = cRed;
+          chartoptns.series[2].borderColor = cDarkRed;
+        }
+        if (charttype == 'barbluesingle') {
+          chartoptns.series = [{}];
+          chartoptns.series[0].color = cBlue;
+          chartoptns.series[0].borderColor = cDarkBlue;
+          // prevent labels from converting to 2k, 4k, etc...
+          chartoptns.yAxis[0].labels.format = '{value}';
+          chartoptns.yAxis[1].labels.format = '{value}';
+        }
+
+        //Merge userOpts and chartoptns
+        var combinedOpts = $.extend(true, {}, sharedOpts, chartoptns, userOpts);
+
+        //Render the chart
+        jQuery.fn.hcChartsRender(chart, combinedOpts, waypointOffset);
+      });
+    }
+    /*====== END: Bar Chart 1 ======*/
+    // POST RENDERERS
+    function bar_postrender(chart, userOpts) {
+      for (var s = 0; s < chart.series.length; s++) {
+        var borderColor = chart.series[s].userOptions.borderColor;
+        for (var d = 0; d < chart.series[s].points.length; d++) {
+          if (chart.series[s].points[d].y != 0 && chart.series[s].visible) {
+            var barcapWidth = 2;
+            var lgth = chart.series[s].points[d].shapeArgs.width;
+            var hgt = chart.series[s].points[d].shapeArgs.height;
+            var xcor = (chart.plotTop + chart.plotHeight - chart.series[s].points[d].shapeArgs.x - lgth);
+            var ycor = (chart.plotLeft + hgt);
+            chart.renderer.rect(ycor, xcor, barcapWidth, lgth, 0)
+              .attr({
+                fill: borderColor,
+                'stroke-width': 1,
+                stroke: borderColor,
+                zIndex: 3,
+                class: 'custom-remove bar-chart-rect'
+              })
+              .add();
+          }
+        }
+      }
+    }; // bar_postrender
+  };
+  //HELPER FUNCTIONS
+  jQuery.fn.hcChartsRender = function(chart, combinedOpts, offset) {
+      if (chart.hasClass("chart-waypoint")) {
+        //waypoint function
+        var waypoints = chart.waypoint(function(direction) {
+          chart.highcharts(combinedOpts);
+          this.destroy();
+        }, {
+          offset: offset,
+        });
+      } else {
+        chart.highcharts(combinedOpts);
+      }
+
+    }
+  //Returns JSON object from string
+  jQuery.fn.userOpts = function(string) {
+    if ($.type(string) != 'string') return string;
+    if (string.indexOf(':') != -1 && string.trim().substr(-1) != '}') {
+      string = '{' + string + '}';
+    }
+    var start = (string ? string.indexOf("{") : -1),
+      options = {};
+    if (start != -1) {
+      try {
+        options = jQuery.fn.str2json(string.substr(start));
+      } catch (e) {}
+    }
+    return options;
+  };
+  //Converts string to JSON
+  jQuery.fn.str2json = function(str, notevil) {
+    try {
+      if (notevil) {
+        return JSON.parse(str
+          // wrap keys without quote with valid double quote
+          .replace(/([\$\w]+)\s*:/g, function(_, $1) {
+            return '"' + $1 + '":';
+          })
+          // replacing single quote wrapped ones to double quote
+          .replace(/'([^']+)'/g, function(_, $1) {
+            return '"' + $1 + '"';
+          })
+        );
+      } else {
+        return (new Function("", "var json = " + str + "; return JSON.parse(JSON.stringify(json));"))();
+      }
+    } catch (e) {
+      return false;
+    }
+  };
+  //Check if element exists function
+  jQuery.fn.doesExist = function() {
+    return jQuery(this).length > 0;
+  };
+})(jQuery);
+
+console.log('js working!!!!');

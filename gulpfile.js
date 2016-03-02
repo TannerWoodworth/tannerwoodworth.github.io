@@ -219,7 +219,7 @@ gulp.task('css', function() {
       .pipe(rename("styles.css"))
       .pipe(gulp.dest('css'))
       .pipe(gulp.dest('_site/css'))
-      .pipe(browserSync.reload({stream:true})); 
+      .pipe(browserSync.reload({stream:true}));
   }
 });
 
@@ -236,7 +236,7 @@ gulp.task('js', function() {
     return gulp.src('_build/js/src/*.js')
       .pipe(plumber({ errorHandler: onError }))
       .pipe(concat('scripts.js'))
-      .pipe(uglify())
+      //.pipe(uglify())
       .pipe(gulp.dest('js'))
       .pipe(gulp.dest('_site/js'))
       .pipe(browserSync.reload({stream:true}));
@@ -245,7 +245,7 @@ gulp.task('js', function() {
     return gulp.src('_build/js/src/*.js')
       .pipe(plumber({ errorHandler: onError }))
       .pipe(concat('scripts.js'))
-      .pipe(uglify())
+      //.pipe(uglify())
       .pipe(gulp.dest('js'))
       .pipe(gulp.dest('_site/js'))
       .pipe(browserSync.reload({stream:true}));
