@@ -157,6 +157,7 @@ main {
   .info_block .text_content {
     display: block;
     width: 100%;
+    margin-top: 0;
   }
 }
 #video p {
@@ -307,6 +308,7 @@ header .mobile-nav {
     text-decoration: none;
     font-weight: bold;
     border: 2px solid #ccc;
+    border-radius: 5px;
   }
   header .expanded {
     display: block;
@@ -428,6 +430,19 @@ main > h3 {
 @media only screen and (max-width: 680px) {
   .group {
     padding: 0px;
+  }
+}
+.large-copy {
+  margin-top: 2.75em !important;
+}
+@media only screen and (max-width: 1100px) {
+  .large-copy {
+    margin-top: -1.4em !important;
+  }
+}
+@media only screen and (max-width: 680px) {
+  .large-copy {
+    margin-top: 0 !important;
   }
 }
 .clearfix:after {

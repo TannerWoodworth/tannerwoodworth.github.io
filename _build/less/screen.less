@@ -144,6 +144,7 @@ main {
     @media only screen and (max-width : 680px) {
       display: block;
       width: 100%;
+      margin-top: 0;
     }
   }
 }// info_block
@@ -294,6 +295,7 @@ header {
       text-decoration: none;
       font-weight: bold;
       border: 2px solid @light-gray;
+      border-radius: 5px;
     }
     .expanded {
       display: block;
@@ -422,6 +424,15 @@ main > h3{
   }
   @media only screen and (max-width : 680px) {
     padding: 0px;
+  }
+}
+.large-copy{
+  margin-top: 2.75em !important;
+  @media only screen and (max-width : 1100px){
+    margin-top: -1.4em !important;
+  }
+  @media only screen and (max-width : 680px){
+    margin-top: 0 !important;
   }
 }
 // ============== CLEARFIX ============= //
