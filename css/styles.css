@@ -223,7 +223,8 @@ main {
 @media only screen and (max-width: 680px) {
   #get-started a {
     display: block;
-    width: 80%;
+    margin: 0 auto;
+    width: 90%;
   }
 }
 #get-started .lets_go {
@@ -260,7 +261,8 @@ main {
   #get-started .lets_go,
   #get-started .learn_more {
     display: block;
-    width: 80%;
+    margin: 0 auto;
+    width: 90%;
   }
   #get-started a {
     float: none !important;
