@@ -21,6 +21,7 @@ function showHome(e) {
   document.getElementById('pg-about').setAttribute("class", "hide-section");
   document.getElementById('pg-cart').setAttribute("class", "hide-section");
   document.getElementById('pg-home').setAttribute("class", "show-section animated fadeIn");
+  showing = false;
 }
 
 function showBuild(e) {
@@ -28,6 +29,7 @@ function showBuild(e) {
   document.getElementById('pg-about').setAttribute("class", "hide-section");
   document.getElementById('pg-cart').setAttribute("class", "hide-section");
   document.getElementById('pg-build').setAttribute("class", "show-section");
+  showing = false;
 }
 
 function showAbout(e) {
@@ -35,6 +37,7 @@ function showAbout(e) {
   document.getElementById('pg-build').setAttribute("class", "hide-section");
   document.getElementById('pg-cart').setAttribute("class", "hide-section");
   document.getElementById('pg-about').setAttribute("class", "show-section");
+  showing = false;
 }
 
 function showCart(e) {
@@ -42,6 +45,7 @@ function showCart(e) {
   document.getElementById('pg-about').setAttribute("class", "hide-section");
   document.getElementById('pg-build').setAttribute("class", "hide-section");
   document.getElementById('pg-cart').setAttribute("class", "show-section");
+  showing = false;
 }
 /**
  *
