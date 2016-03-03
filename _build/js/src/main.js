@@ -66,14 +66,14 @@ function showCart(e) {
   //================================
   jQuery.fn.hcCharts = function() {
     // Colors
-    var cYellow = "#E9B841",
-      cDarkYellow = "#E0A82B",
-      cOrange = "#E08126",
-      cDarkOrange = "#D16F1E",
-      cRed = "#D85932",
-      cDarkRed = "#D34626",
-      cBlue = "#307690",
-      cDarkBlue = "#255C70";
+    var sM = "#4290c5",
+        dSM = "#316B92",
+        as = "#CF5B5A",
+        dAS = "#822D2C",
+        hL = "#288feb",
+        dHL = "#1d82dc",
+        sD = "#008a32",
+        dSD = "#007129";
 
     var sharedOpts = {
       lang: {
@@ -242,13 +242,15 @@ function showCart(e) {
         //Chartype Overrides
         var charttype = chart.data('charttype');
         if (charttype == 'bartricolor') {
-          chartoptns.series = [{}, {}, {}];
-          chartoptns.series[0].color = cYellow;
-          chartoptns.series[0].borderColor = cDarkYellow;
-          chartoptns.series[1].color = cOrange;
-          chartoptns.series[1].borderColor = cDarkOrange;
-          chartoptns.series[2].color = cRed;
-          chartoptns.series[2].borderColor = cDarkRed;
+          chartoptns.series = [{}, {}, {}, {}];
+          chartoptns.series[0].color = sM;
+          chartoptns.series[0].borderColor = dSM;
+          chartoptns.series[1].color = as;
+          chartoptns.series[1].borderColor = dAS;
+          chartoptns.series[2].color = hL;
+          chartoptns.series[2].borderColor = dHL;
+          chartoptns.series[3].color = sD;
+          chartoptns.series[3].borderColor = dSD;
         }
         if (charttype == 'barbluesingle') {
           chartoptns.series = [{}];
