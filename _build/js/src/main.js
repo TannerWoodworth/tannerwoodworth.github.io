@@ -37,6 +37,7 @@ function showAbout(e) {
   document.getElementById('pg-build').setAttribute("class", "hide-section");
   document.getElementById('pg-cart').setAttribute("class", "hide-section");
   document.getElementById('pg-about').setAttribute("class", "show-section");
+  $(this).hcCharts();
   showing = false;
 }
 
