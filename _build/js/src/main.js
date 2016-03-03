@@ -47,6 +47,14 @@ function showCart(e) {
   document.getElementById('pg-cart').setAttribute("class", "show-section");
   showing = false;
 }
+function displayDist(e) {
+  document.getElementById('cms').setAttribute("class", "hide-section");
+  document.getElementById('dist').setAttribute("class", "group clearfix animated fadeIn show-section");
+}
+function displayCMS(e) {
+  document.getElementById('dist').setAttribute("class", "hide-section");
+  document.getElementById('cms').setAttribute("class", "group clearfix animated fadeIn show-section");
+}
 /**
  *
  * HIGHCHARTS

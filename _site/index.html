@@ -12,7 +12,7 @@
     <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="last-modified" content="Wed, 02 Mar 2016 19:32:36 -0500 GMT" />
+<meta http-equiv="last-modified" content="Wed, 02 Mar 2016 22:00:58 -0500 GMT" />
 <meta http-equiv="cache-control" content="Private" />
 <meta http-equiv="Expires" content="600" />
 <link rel="apple-touch-icon" href="favicon-apple-touch.png">
@@ -70,35 +70,35 @@
     <div id="splash" class="splash_image">
       <h2>Web Hosting Made Simple</h2>
     </div>
-    <div id="fast" class="info_block clearfix wow fadeIn">
+    <div id="fast" class="info_block clearfix ">
       <img src="images/placeholder.gif" class="left" alt=""/>
       <div class="text_content">
         <h3>We're Fast</h3>
         <p>The average user will close a webpage in less than 3 seconds if it hasn't loaded. People want their content and they want it fast. All of our servers use solid state drives, the fastest of their kind, and built on top of Hex Core machines. Because you deserve it.</p>
       </div>
     </div>
-    <div id="secure" class="info_block clearfix wow fadeIn">
+    <div id="secure" class="info_block clearfix ">
       <img src="images/placeholder.gif" class="right" alt=""/>
       <div class="text_content">
         <h3>We're Always Up</h3>
         <p>Our servers are always up and delivering content any time of the day and year with a 99.99% uptime guarantee. If we ever fail to deliver, we will credit you 2x the amount of server time lost. No need to even ask!</p>
       </div>
     </div>
-    <div id="simple" class="info_block clearfix wow fadeIn">
+    <div id="simple" class="info_block clearfix ">
       <img src="images/placeholder.gif" class="left" alt=""/>
       <div class="text_content large-copy">
         <h3>We're Simple</h3>
         <p>Whether this is your first or 100th time setting up a server you'll have no problem getting started. We offer servers that come preconfigured with popular content management systems such as Wordpress, Drupal, and Joomla. If you're just looking for a basic server, we offer you several options of Linux-based servers with LAMP and LEMP stacks. </p>
       </div>
     </div>
-    <div id="support" class="info_block clearfix wow fadeIn">
+    <div id="support" class="info_block clearfix ">
       <img src="images/placeholder.gif" class="right" alt=""/>
       <div class="text_content">
         <h3>We're Always There</h3>
         <p>Our servers are always up and running, so why shouldn't we? We offer 24/7 support over phone, email, and chat with any hosting plan — no matter the size.</p>
       </div>
     </div>
-    <div id="video" class="wow fadeIn">
+    <div id="video" class="">
       <h3>What makes us Superior</h3>
       <div class="iframe">
         <div class="embed-container">
@@ -107,7 +107,7 @@
       </div>
       <p>I spend a lot of time walking around in the woods and talking to trees, and squirrels, and little rabbits and stuff. I'm a water fanatic. I love water. I'm going to mix up a little color. We’ll use Van Dyke Brown, Permanent Red, and a little bit of Prussian Blue.</p>
     </div>
-    <div id="get-started" class="clearfix wow fadeIn">
+    <div id="get-started" class="clearfix ">
       <h3>So what do you say?</h3>
       <div class="center_content clearfix">
         <div class="lets_go">
@@ -125,35 +125,76 @@
   <main class="clearfix animated fadeIn">
     <h1>Setup your Plan</h1>
     <h2>Select a Distribution</h2>
-    <div class="group clearfix">
+    <div class="select-distro clearfix">
+      <a href="#" onclick="displayDist();">Distributions</a>
+      <a href="#" onclick="displayCMS();">Content Management Systems</a>
+    </div>
+    <div id="dist" class="group clearfix">
       <div id="ubuntu" class="group-item clearfix">
         <div class="group-info">
           <img src="images/ubuntu-gray.png"/>
-          <p class="item-title">Ubuntu <span class="version">15.10x64</span></p>
+          <div class="group-text clearfix">
+            <p class="item-title">Ubuntu <span class="version">15.10x64</span></p>
+          </div>
         </div>
       </div>
       <div id="ubuntu2" class="group-item clearfix">
-        <div class="group-info">
+        <div class="group-info clearfix">
           <img src="images/ubuntu-gray.png"/>
-          <p class="item-title">Ubuntu <span class="version">14.04x64</span></p>
+          <div class="group-text clearfix">
+            <p class="item-title clearfix">Ubuntu <span class="version">14.04x64</span></p>
+          </div>
         </div>
       </div>
       <div id="ardebian" class="group-item clearfix">
         <div class="group-info">
           <img src="images/ardebian-gray.png"/>
-          <p class="item-title">Ardebian</p>
+          <div class="group-text clearfix">
+            <p class="item-title clearfix">Ardebian <span class="version">14.04x64</span></p>
+          </div>
         </div>
       </div>
       <div id="centos" class="group-item clearfix">
         <div class="group-info">
           <img src="images/centOS-gray.png"/>
-          <p class="item-title">centOS</p>
+          <div class="group-text clearfix">
+            <p class="item-title clearfix">centOS <span class="version">14.04x64</span></p>
+          </div>
         </div>
       </div>
       <div id="coreos" class="group-item clearfix">
         <div class="group-info">
           <img src="images/coreOS-gray.png"/>
-          <p class="item-title">coreOS</p>
+          <div class="group-text clearfix">
+            <p class="item-title clearfix">coreOS <span class="version">14.04x64</span></p>
+          </div>
+        </div>
+      </div>
+    </div><!-- / group class -->
+
+    <div id="cms" class="group clearfix hide-section">
+      <div id="ubuntu" class="group-item clearfix">
+        <div class="group-info">
+          <img src="images/ubuntu-gray.png"/>
+          <p class="item-title">Wordpress</p>
+        </div>
+      </div>
+      <div id="ubuntu2" class="group-item clearfix">
+        <div class="group-info">
+          <img src="images/ubuntu-gray.png"/>
+          <p class="item-title">Drupal 7 <span class="version">14.04x64</span></p>
+        </div>
+      </div>
+      <div id="ardebian" class="group-item clearfix">
+        <div class="group-info">
+          <img src="images/ardebian-gray.png"/>
+          <p class="item-title">Drupal 8</p>
+        </div>
+      </div>
+      <div id="centos" class="group-item clearfix">
+        <div class="group-info">
+          <img src="images/centOS-gray.png"/>
+          <p class="item-title">Joomla</p>
         </div>
       </div>
     </div><!-- / group class -->
