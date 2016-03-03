@@ -3776,9 +3776,10 @@ main > h3 {
   padding: 1em;
   margin-bottom: 1em;
 }
-.group .group-item:hover .group-text {
+.group .group-item:hover img {
   transition: all 0.4s ease;
-  background-color: rgba(66, 144, 197, 0.3);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 .group .group-item .group-text {
   border-top: 1px solid #ccc;
