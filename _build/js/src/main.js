@@ -21,7 +21,7 @@ function showHome(e) {
   document.getElementById('pg-about').setAttribute("class", "hide-section");
   document.getElementById('pg-cart').setAttribute("class", "hide-section");
   document.getElementById('pg-home').setAttribute("class", "show-section animated fadeIn");
-  showing = false;
+  $('html,body').scrollTop(0);
 }
 
 function showBuild(e) {
@@ -29,7 +29,7 @@ function showBuild(e) {
   document.getElementById('pg-about').setAttribute("class", "hide-section");
   document.getElementById('pg-cart').setAttribute("class", "hide-section");
   document.getElementById('pg-build').setAttribute("class", "show-section");
-  showing = false;
+  $('html,body').scrollTop(0);
 }
 
 function showAbout(e) {
@@ -37,8 +37,8 @@ function showAbout(e) {
   document.getElementById('pg-build').setAttribute("class", "hide-section");
   document.getElementById('pg-cart').setAttribute("class", "hide-section");
   document.getElementById('pg-about').setAttribute("class", "show-section");
+  $('html,body').scrollTop(0);
   $(this).hcCharts();
-  showing = false;
 }
 
 function showCart(e) {
@@ -46,8 +46,14 @@ function showCart(e) {
   document.getElementById('pg-about').setAttribute("class", "hide-section");
   document.getElementById('pg-build').setAttribute("class", "hide-section");
   document.getElementById('pg-cart').setAttribute("class", "show-section");
-  showing = false;
+  $('html,body').scrollTop(0);
 }
+
+/**
+ *
+ * GET STARTED PAGE FUNCTIONS
+ *
+ **/
 function displayDist(e) {
   document.getElementById('cms').setAttribute("class", "hide-section");
   document.getElementById('dist').setAttribute("class", "group clearfix animated fadeIn show-section");
@@ -64,11 +70,6 @@ function displayCMS(e) {
 (function($) {
   $(document).ready(function() {
     $(this).hcCharts();
-    Highcharts.setOptions({
-      lang: {
-        thousandsSep: ',',
-      }
-    });
   });
   //================================
   // Highcharts Charts
@@ -79,8 +80,8 @@ function displayCMS(e) {
         dSM = "#316B92",
         as = "#CF5B5A",
         dAS = "#822D2C",
-        hL = "#288feb",
-        dHL = "#1d82dc",
+        hL = "#F8743A",
+        dHL = "#C55C2E",
         sD = "#008a32",
         dSD = "#007129";
 
@@ -159,7 +160,7 @@ function displayCMS(e) {
           }, {
             gridLineColor: '#bcbdbf',
             minorGridLineColor: '#DADCDB',
-            gridLineWidth: 3,
+            gridLineWidth: 2,
             minorGridLineWidth: 1,
             opposite: true,
             title: {
@@ -284,7 +285,7 @@ function displayCMS(e) {
         var borderColor = chart.series[s].userOptions.borderColor;
         for (var d = 0; d < chart.series[s].points.length; d++) {
           if (chart.series[s].points[d].y != 0 && chart.series[s].visible) {
-            var barcapWidth = 2;
+            var barcapWidth = 4;
             var lgth = chart.series[s].points[d].shapeArgs.width;
             var hgt = chart.series[s].points[d].shapeArgs.height;
             var xcor = (chart.plotTop + chart.plotHeight - chart.series[s].points[d].shapeArgs.x - lgth);

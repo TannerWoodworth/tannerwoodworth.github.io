@@ -3764,12 +3764,10 @@ nav ul li {
 main > h3 {
   float: left;
 }
-.group {
-  padding: .5em;
-}
 .group .group-item {
   transition: all 0.4s ease;
   display: inline-block;
+  border-radius: 5px;
   border: 1px solid #ccc;
   background-color: #fff;
   width: 29%;
