@@ -5,7 +5,7 @@
 @white-gray: #eee;
 @light-gray: #ccc;
 @medium-gray: #666;
-@dark-gray: #333;
+@dark-gray: #3d3d3d;
 @light-cream: #f0eae2;
 @light-blue: #83B0CF;
 @blue: #4290c5;
@@ -397,6 +397,7 @@ main > h3{
     border: 1px solid @light-gray;
     background-color: #fff;
     width: 29%;
+    height:230px;
     padding:1em;
     margin-bottom:1em;
     &:hover{
@@ -428,6 +429,19 @@ main > h3{
       p{
         font-weight: bold;
       }
+      .size-title{
+        text-align: center;
+        font-size: 1.15em;
+        margin: 0 auto;
+        padding-bottom: 1em;
+        border-bottom: solid 1px @light-gray;
+      }
+      .size-price{
+        text-align: center;
+        font-size: 2.5em;
+        margin: .25em auto;
+      }
+
       .version{
         color:@medium-gray;
         font-weight: normal;
@@ -458,6 +472,11 @@ main > h3{
   @media only screen and (max-width : 680px){
     margin-top: 0 !important;
   }
+}
+.month{
+  color:@light-gray;
+  font-weight: normal;
+  font-size: .75em;
 }
 // ============== CLEARFIX ============= //
 .clearfix:after {
