@@ -12,7 +12,7 @@
     <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="last-modified" content="Sat, 05 Mar 2016 13:32:53 -0500 GMT" />
+<meta http-equiv="last-modified" content="Sat, 05 Mar 2016 14:10:50 -0500 GMT" />
 <meta http-equiv="cache-control" content="Private" />
 <meta http-equiv="Expires" content="600" />
 <link rel="apple-touch-icon" href="favicon-apple-touch.png">
@@ -134,7 +134,7 @@
       <div id="blank" class="selected hidden"></div>
       <div id="ubuntu" class="group-item clearfix" onclick="selectUbuntu()">
         <div class="group-info">
-          <img src="images/ubuntu-gray.png"/>
+          <img class="distImg" src="images/ubuntu-gray.png"/>
           <div class="group-text clearfix">
             <p class="item-title">Ubuntu <span class="version">15.10x64</span></p>
           </div>
@@ -142,7 +142,7 @@
       </div>
       <div id="ubuntu2" class="group-item clearfix" onclick="selectUbuntu2()">
         <div class="group-info clearfix">
-          <img src="images/ubuntu-gray.png"/>
+          <img class="distImg" src="images/ubuntu-gray.png"/>
           <div class="group-text clearfix">
             <p class="item-title clearfix">Ubuntu <span class="version">14.04x64</span></p>
           </div>
@@ -150,7 +150,7 @@
       </div>
       <div id="ardebian" class="group-item clearfix" onclick="selectArdebian()">
         <div class="group-info">
-          <img src="images/ardebian-gray.png"/>
+          <img class="distImg" src="images/ardebian-gray.png"/>
           <div class="group-text clearfix">
             <p class="item-title clearfix">Ardebian <span class="version">14.04x64</span></p>
           </div>
@@ -158,7 +158,7 @@
       </div>
       <div id="centos" class="group-item clearfix" onclick="selectCentOS()">
         <div class="group-info">
-          <img src="images/centOS-gray.png"/>
+          <img class="distImg" src="images/centOS-gray.png"/>
           <div class="group-text clearfix">
             <p class="item-title clearfix">centOS <span class="version">14.04x64</span></p>
           </div>
@@ -166,7 +166,7 @@
       </div>
       <div id="coreos" class="group-item clearfix" onclick="selectCoreOS()">
         <div class="group-info">
-          <img src="images/coreOS-gray.png"/>
+          <img class="distImg" src="images/coreOS-gray.png"/>
           <div class="group-text clearfix">
             <p class="item-title clearfix">coreOS <span class="version">14.04x64</span></p>
           </div>
@@ -174,7 +174,7 @@
       </div>
       <div id="freebsd" class="group-item clearfix" onclick="selectFreeBSD()">
         <div class="group-info">
-          <img src="images/freeBSD-gray.png"/>
+          <img class="distImg" src="images/freeBSD-gray.png"/>
           <div class="group-text clearfix">
             <p class="item-title clearfix">freeBSD <span class="version">14.04x64</span></p>
           </div>
@@ -183,7 +183,7 @@
     </div><!-- / group class -->
 
     <div id="cms" class="group clearfix hide-section">
-      <div id="wordpress" class="group-item clearfix">
+      <div id="wordpress" class="group-item clearfix" onclick="selectWordpress()">
         <div class="group-info">
           <img src="images/wordpress-gray.png"/>
           <div class="group-text clearfix">
@@ -191,7 +191,7 @@
           </div>
         </div>
       </div>
-      <div id="drupal7" class="group-item clearfix">
+      <div id="drupal7" class="group-item clearfix" onclick="selectDrupal7()">
         <div class="group-info clearfix">
           <img src="images/drupal-gray.png"/>
           <div class="group-text clearfix">
@@ -199,7 +199,7 @@
           </div>
         </div>
       </div>
-      <div id="drupal8" class="group-item clearfix">
+      <div id="drupal8" class="group-item clearfix" onclick="selectDrupal8()">
         <div class="group-info">
           <img src="images/drupal-gray.png"/>
           <div class="group-text clearfix">
@@ -207,7 +207,7 @@
           </div>
         </div>
       </div>
-      <div id="joomla" class="group-item clearfix">
+      <div id="joomla" class="group-item clearfix" onclick="selectJoomla()">
         <div class="group-info">
           <img src="images/joomla-gray.png"/>
           <div class="group-text clearfix">

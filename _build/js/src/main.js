@@ -96,6 +96,26 @@ function selectFreeBSD(e){
   document.getElementById("freebsd").className += " selected";
   selectedDistro="freebsd";
 };
+function selectWordpress(e){
+  document.getElementById(selectedDistro).className = document.getElementById(selectedDistro).className.replace( /(?:^|\s)selected(?!\S)/g , '' );
+  document.getElementById("wordpress").className += " selected";
+  selectedDistro="wordpress";
+};
+function selectDrupal7(e){
+  document.getElementById(selectedDistro).className = document.getElementById(selectedDistro).className.replace( /(?:^|\s)selected(?!\S)/g , '' );
+  document.getElementById("drupal7").className += " selected";
+  selectedDistro="drupal7";
+};
+function selectDrupal8(e){
+  document.getElementById(selectedDistro).className = document.getElementById(selectedDistro).className.replace( /(?:^|\s)selected(?!\S)/g , '' );
+  document.getElementById("drupal8").className += " selected";
+  selectedDistro="drupal8";
+};
+function selectJoomla(e){
+  document.getElementById(selectedDistro).className = document.getElementById(selectedDistro).className.replace( /(?:^|\s)selected(?!\S)/g , '' );
+  document.getElementById("joomla").className += " selected";
+  selectedDistro="joomla";
+};
 /**
  *
  * HIGHCHARTS
