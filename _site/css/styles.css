@@ -3771,7 +3771,6 @@ main > h3 {
   border: 1px solid #ccc;
   background-color: #fff;
   width: 29%;
-  height: 230px;
   padding: 1em;
   margin-bottom: 1em;
 }
@@ -3849,6 +3848,13 @@ main > h3 {
   color: #ccc;
   font-weight: normal;
   font-size: .75em;
+}
+.selected {
+  background-color: #4290c5 !important;
+  color: #fff !important;
+}
+.selected .version {
+  color: #fff !important;
 }
 .clearfix:after {
   content: " ";

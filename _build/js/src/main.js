@@ -48,12 +48,15 @@ function showCart(e) {
   document.getElementById('pg-cart').setAttribute("class", "show-section");
   $('html,body').scrollTop(0);
 }
-
 /**
  *
  * GET STARTED PAGE FUNCTIONS
  *
  **/
+var selectedDistro,
+    selectedSize,
+    serverName;
+
 function displayDist(e) {
   document.getElementById('cms').setAttribute("class", "hide-section");
   document.getElementById('dist').setAttribute("class", "group clearfix animated fadeIn show-section");
@@ -61,6 +64,15 @@ function displayDist(e) {
 function displayCMS(e) {
   document.getElementById('dist').setAttribute("class", "hide-section");
   document.getElementById('cms').setAttribute("class", "group clearfix animated fadeIn show-section");
+}
+
+function selectUbuntu(e){
+  document.getElementById("ubuntu2").className = document.getElementById("ubuntu2").className.replace( /(?:^|\s)selected(?!\S)/g , '' )
+  document.getElementById("ubuntu").className += " selected";
+}
+function selectUbuntu2(e){
+  document.getElementById("ubuntu").className = document.getElementById("ubuntu").className.replace( /(?:^|\s)selected(?!\S)/g , '' )
+  document.getElementById("ubuntu2").className += " selected";
 }
 /**
  *
