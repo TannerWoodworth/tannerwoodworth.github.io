@@ -3810,6 +3810,7 @@ main > h3 {
   margin: .25em auto;
 }
 .group .group-item .group-info .version {
+  transition: all 0.4s ease;
   color: #666;
   font-weight: normal;
 }
@@ -3854,6 +3855,7 @@ main > h3 {
   color: #fff !important;
 }
 .selected .version {
+  transition: all 0.4s ease;
   color: #fff !important;
 }
 .clearfix:after {

@@ -53,7 +53,7 @@ function showCart(e) {
  * GET STARTED PAGE FUNCTIONS
  *
  **/
-var selectedDistro,
+var selectedDistro = "blank",
     selectedSize,
     serverName;
 
@@ -67,13 +67,35 @@ function displayCMS(e) {
 }
 
 function selectUbuntu(e){
-  document.getElementById("ubuntu2").className = document.getElementById("ubuntu2").className.replace( /(?:^|\s)selected(?!\S)/g , '' )
+  document.getElementById("ubuntu2").className = document.getElementById("ubuntu2").className.replace( /(?:^|\s)selected(?!\S)/g , '' );
   document.getElementById("ubuntu").className += " selected";
-}
+  selectedDistro="ubuntu";
+};
 function selectUbuntu2(e){
-  document.getElementById("ubuntu").className = document.getElementById("ubuntu").className.replace( /(?:^|\s)selected(?!\S)/g , '' )
+  document.getElementById(selectedDistro).className = document.getElementById(selectedDistro).className.replace( /(?:^|\s)selected(?!\S)/g , '' );
   document.getElementById("ubuntu2").className += " selected";
-}
+  selectedDistro="ubuntu2";
+};
+function selectArdebian(e){
+  document.getElementById(selectedDistro).className = document.getElementById(selectedDistro).className.replace( /(?:^|\s)selected(?!\S)/g , '' );
+  document.getElementById("ardebian").className += " selected";
+  selectedDistro="ardebian";
+};
+function selectCentOS(e){
+  document.getElementById(selectedDistro).className = document.getElementById(selectedDistro).className.replace( /(?:^|\s)selected(?!\S)/g , '' );
+  document.getElementById("centos").className += " selected";
+  selectedDistro="centos";
+};
+function selectCoreOS(e){
+  document.getElementById(selectedDistro).className = document.getElementById(selectedDistro).className.replace( /(?:^|\s)selected(?!\S)/g , '' );
+  document.getElementById("coreos").className += " selected";
+  selectedDistro="coreos";
+};
+function selectFreeBSD(e){
+  document.getElementById(selectedDistro).className = document.getElementById(selectedDistro).className.replace( /(?:^|\s)selected(?!\S)/g , '' );
+  document.getElementById("freebsd").className += " selected";
+  selectedDistro="freebsd";
+};
 /**
  *
  * HIGHCHARTS

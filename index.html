@@ -70,6 +70,7 @@ layout: page_default
       <a href="#" onclick="displayCMS();">Content Management Systems</a>
     </div>
     <div id="dist" class="group clearfix">
+      <div id="blank" class="selected hidden"></div>
       <div id="ubuntu" class="group-item clearfix" onclick="selectUbuntu()">
         <div class="group-info">
           <img src="images/ubuntu-gray.png"/>
@@ -86,7 +87,7 @@ layout: page_default
           </div>
         </div>
       </div>
-      <div id="ardebian" class="group-item clearfix">
+      <div id="ardebian" class="group-item clearfix" onclick="selectArdebian()">
         <div class="group-info">
           <img src="images/ardebian-gray.png"/>
           <div class="group-text clearfix">
@@ -94,7 +95,7 @@ layout: page_default
           </div>
         </div>
       </div>
-      <div id="centos" class="group-item clearfix">
+      <div id="centos" class="group-item clearfix" onclick="selectCentOS()">
         <div class="group-info">
           <img src="images/centOS-gray.png"/>
           <div class="group-text clearfix">
@@ -102,7 +103,7 @@ layout: page_default
           </div>
         </div>
       </div>
-      <div id="coreos" class="group-item clearfix">
+      <div id="coreos" class="group-item clearfix" onclick="selectCoreOS()">
         <div class="group-info">
           <img src="images/coreOS-gray.png"/>
           <div class="group-text clearfix">
@@ -110,7 +111,7 @@ layout: page_default
           </div>
         </div>
       </div>
-      <div id="coreos" class="group-item clearfix">
+      <div id="freebsd" class="group-item clearfix" onclick="selectFreeBSD()">
         <div class="group-info">
           <img src="images/freeBSD-gray.png"/>
           <div class="group-text clearfix">
