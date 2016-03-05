@@ -67,7 +67,7 @@ function displayCMS(e) {
 }
 
 function selectUbuntu(e){
-  document.getElementById("selectedDistro").className = document.getElementById("selectedDistro").className.replace( /(?:^|\s)selected(?!\S)/g , '' );
+  document.getElementById(selectedDistro).className = document.getElementById(selectedDistro).className.replace( /(?:^|\s)selected(?!\S)/g , '' );
   document.getElementById("ubuntu").className += " selected";
   selectedDistro="ubuntu";
 };
