@@ -54,7 +54,7 @@ function showCart(e) {
  *
  **/
 var selectedDistro = "blank",
-    selectedSize,
+    selectedSize  = "blank",
     serverName;
 
 function displayDist(e) {
@@ -115,6 +115,31 @@ function selectJoomla(e){
   document.getElementById(selectedDistro).className = document.getElementById(selectedDistro).className.replace( /(?:^|\s)selected(?!\S)/g , '' );
   document.getElementById("joomla").className += " selected";
   selectedDistro="joomla";
+};
+function selectSmall(e){
+  document.getElementById(selectedSize).className = document.getElementById(selectedSize).className.replace( /(?:^|\s)selected(?!\S)/g , '' );
+  document.getElementById("small").className += " selected";
+  selectedSize="small";
+};
+function selectMedium(e){
+  document.getElementById(selectedSize).className = document.getElementById(selectedSize).className.replace( /(?:^|\s)selected(?!\S)/g , '' );
+  document.getElementById("medium").className += " selected";
+  selectedSize="medium";
+};
+function selectLarge(e){
+  document.getElementById(selectedSize).className = document.getElementById(selectedSize).className.replace( /(?:^|\s)selected(?!\S)/g , '' );
+  document.getElementById("large").className += " selected";
+  selectedSize="large";
+};
+function selectCorporate(e){
+  document.getElementById(selectedSize).className = document.getElementById(selectedSize).className.replace( /(?:^|\s)selected(?!\S)/g , '' );
+  document.getElementById("corporate").className += " selected";
+  selectedSize="corporate";
+};
+function selectUltimate(e){
+  document.getElementById(selectedSize).className = document.getElementById(selectedSize).className.replace( /(?:^|\s)selected(?!\S)/g , '' );
+  document.getElementById("ultimate").className += " selected";
+  selectedSize="ultimate";
 };
 /**
  *

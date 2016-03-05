@@ -12,7 +12,7 @@
     <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="last-modified" content="Sat, 05 Mar 2016 14:10:50 -0500 GMT" />
+<meta http-equiv="last-modified" content="Sat, 05 Mar 2016 16:45:38 -0500 GMT" />
 <meta http-equiv="cache-control" content="Private" />
 <meta http-equiv="Expires" content="600" />
 <link rel="apple-touch-icon" href="favicon-apple-touch.png">
@@ -219,7 +219,7 @@
     <div>
       <h2>Select a size <span class="month">(Billed Monthly)</span></h2>
       <div id="size" class="group clearfix">
-        <div id="small" class="group-item clearfix">
+        <div id="small" class="group-item clearfix" onclick="selectSmall()">
           <div class="group-info">
             <p class="size-title">Small</p>
             <p class="size-price">$5</p>
@@ -230,7 +230,7 @@
             </div>
           </div>
         </div>
-        <div id="medium" class="group-item clearfix">
+        <div id="medium" class="group-item clearfix" onclick="selectMedium()">
           <div class="group-info">
             <p class="size-title">Medium</p>
             <p class="size-price">$10</p>
@@ -241,7 +241,7 @@
             </div>
           </div>
         </div>
-        <div id="large" class="group-item clearfix">
+        <div id="large" class="group-item clearfix" onclick="selectLarge()">
           <div class="group-info">
             <p class="size-title">Large</p>
             <p class="size-price">$20</p>
@@ -252,7 +252,7 @@
             </div>
           </div>
         </div>
-        <div id="corporate" class="group-item clearfix">
+        <div id="corporate" class="group-item clearfix" onclick="selectCorporate()">
           <div class="group-info">
             <p class="size-title">Corporate</p>
             <p class="size-price">$60</p>
@@ -263,7 +263,7 @@
             </div>
           </div>
         </div>
-        <div id="ultimate" class="group-item clearfix">
+        <div id="ultimate" class="group-item clearfix" onclick="selectUltimate()">
           <div class="group-info">
             <p class="size-title">Ultimate</p>
             <p class="size-price">$120</p>
