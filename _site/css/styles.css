@@ -3771,6 +3771,7 @@ main > h3 {
   border: 1px solid #ccc;
   background-color: #fff;
   width: 29%;
+  cursor: pointer;
   padding: 1em;
   margin-bottom: 1em;
 }
