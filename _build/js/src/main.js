@@ -53,6 +53,12 @@ function showCart(e) {
  * GET STARTED PAGE FUNCTIONS
  *
  **/
+ function goToSize(event) {
+     $('html,body').animate({
+         scrollTop: $("#size").offset().top
+     }, 500);
+ } // goToSize
+
 var selectedDistro = "blank",
     selectedSize  = "blank",
     serverName;
@@ -70,6 +76,7 @@ function selectUbuntu(e){
   document.getElementById(selectedDistro).className = document.getElementById(selectedDistro).className.replace( /(?:^|\s)selected(?!\S)/g , '' );
   document.getElementById("ubuntu").className += " selected";
   selectedDistro="ubuntu";
+  //goToSize();
 };
 function selectUbuntu2(e){
   document.getElementById(selectedDistro).className = document.getElementById(selectedDistro).className.replace( /(?:^|\s)selected(?!\S)/g , '' );

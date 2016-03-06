@@ -31,7 +31,7 @@
   width:100%;
   border-bottom: solid 1px @light-gray;
   padding-bottom: .5em;
-  margin: 0 auto 1em auto;
+  margin: -.75em auto 1em auto;
   a{
     margin-right:.5em;
   }
@@ -488,6 +488,42 @@ main > h3{
     -moz-transition: all 0.4s ease;
     transition: all 0.4s ease;
     color:#fff !important;
+  }
+}
+input[type=text]{
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  outline: none;
+  border: 1px solid @light-gray;
+  padding: .5em;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  color: @dark-gray;
+  border-radius: 5px;
+  &:focus{
+    border: 1px solid rgba(66,144,197,.75);
+    box-shadow: 0 0 10px @blue;
+  };
+  @media only screen and (max-width : 680px){
+    width:94%;
+  }
+}
+.checkout{
+  margin-top: 1em;
+  text-align: center;
+  background-color: @blue;
+  padding: 1em;
+  width: 25%;
+  border-radius: 5px;
+  a{
+    color:#fff;
+  }
+  &:hover{
+    background-color: @dark-blue;
+  }
+  @media only screen and (max-width : 680px){
+    width:90%;
   }
 }
 // ============== CLEARFIX ============= //

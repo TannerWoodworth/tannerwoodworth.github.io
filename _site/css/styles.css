@@ -3389,7 +3389,7 @@
   width: 100%;
   border-bottom: solid 1px #ccc;
   padding-bottom: .5em;
-  margin: 0 auto 1em auto;
+  margin: -0.75em auto 1em auto;
 }
 .select-distro a {
   margin-right: .5em;
@@ -3858,6 +3858,44 @@ main > h3 {
 .selected .version {
   transition: all 0.4s ease;
   color: #fff !important;
+}
+input[type=text] {
+  transition: all 0.4s ease;
+  outline: none;
+  border: 1px solid #ccc;
+  padding: .5em;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  color: #3d3d3d;
+  border-radius: 5px;
+}
+input[type=text]:focus {
+  border: 1px solid rgba(66, 144, 197, 0.75);
+  box-shadow: 0 0 10px #4290c5;
+}
+@media only screen and (max-width: 680px) {
+  input[type=text] {
+    width: 94%;
+  }
+}
+.checkout {
+  margin-top: 1em;
+  text-align: center;
+  background-color: #4290c5;
+  padding: 1em;
+  width: 25%;
+  border-radius: 5px;
+}
+.checkout a {
+  color: #fff;
+}
+.checkout:hover {
+  background-color: #316B92;
+}
+@media only screen and (max-width: 680px) {
+  .checkout {
+    width: 90%;
+  }
 }
 .clearfix:after {
   content: " ";
