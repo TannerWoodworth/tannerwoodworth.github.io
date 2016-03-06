@@ -74,7 +74,7 @@ function showCart(e) {
      document.getElementById('error').innerHTML=errors;
      return false;
    } else{
-     console.log(selectedDistro+', '+selectedSize+', '+serverName);
+     document.getElementById('error').setAttribute("class", "hide-section");
      document.getElementById('pg-build').setAttribute("class", "hide-section");
      document.getElementById('pg-cart').setAttribute("class", "show-section");
      $('html,body').scrollTop(0);
