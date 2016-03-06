@@ -12,7 +12,7 @@
     <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="last-modified" content="Sun, 06 Mar 2016 16:46:09 -0500 GMT" />
+<meta http-equiv="last-modified" content="Sun, 06 Mar 2016 17:58:00 -0500 GMT" />
 <meta http-equiv="cache-control" content="Private" />
 <meta http-equiv="Expires" content="600" />
 <link rel="apple-touch-icon" href="favicon-apple-touch.png">
@@ -324,22 +324,21 @@
     <div id="cart-content">
       <h2>Selected Distribution</h2>
       <div id="cart-distro" class="selected-distro">
-        <p>Distribution: <span class="distro-name"></p>
-        <p>Version: <span class="distro-version"></p>
-        <a href="#cart-distro" onclick="changeDist()">Change Distribution</a>
+
       </div>
       <h2>Selected Server Plan</h2>
       <div id="cart-size" class="selected-size">
-        <p>Plan Name: <span class="plan-name"></p>
-        <p>Size: <span class="plan-size"></p>
-        <p>Speed: <span class="plan-speed"></p>
-        <p>Transfer Limit: <span class="plan-transfer"></p>
-        <a href="#cart-size" onclick="changeSize()">Change Server Size</a>
+
       </div>
       <h2>Selected Server Name</h2>
       <div id="cart-name" class="selected-name">
-        <p>Name: <span class="server-name"></p>
-        <a href="#cart-name" onclick="changeName()">Change Server Name</a>
+
+      </div>
+      <div id="change-name" class="hide-section">
+        <input type="text" name="serverName">
+        <div class="checkout" onclick="changeCartName();">
+          <a href="#change-name">Change Name</a>
+        </div>
       </div>
     </div>
   </main>
