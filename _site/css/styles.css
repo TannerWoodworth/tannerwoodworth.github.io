@@ -3859,6 +3859,9 @@ main > h3 {
   transition: all 0.4s ease;
   color: #fff !important;
 }
+.highlight {
+  box-shadow: 0 0 10px rgba(207, 91, 90, 0.75);
+}
 input[type=text] {
   transition: all 0.4s ease;
   outline: none;
@@ -3899,14 +3902,15 @@ input[type=text]:focus {
   }
 }
 #error {
-  background-color: rgba(207, 91, 90, 0.6);
+  background-color: rgba(207, 91, 90, 0.5);
   border: 1px solid #822D2C;
-  color: #822D2C;
   padding: .5em;
   margin-top: 1em;
   border-radius: 5px;
 }
-#error p {
+#error a {
+  display: block;
+  color: #822D2C !important;
   margin: 0;
 }
 @media only screen and (max-width: 680px) {
