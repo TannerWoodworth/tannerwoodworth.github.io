@@ -46,6 +46,7 @@ function showCart(e) {
   document.getElementById('pg-about').setAttribute("class", "hide-section");
   document.getElementById('pg-build').setAttribute("class", "hide-section");
   document.getElementById('pg-cart').setAttribute("class", "show-section");
+  cartContents();
   $('html,body').scrollTop(0);
 }
 /**
@@ -179,6 +180,28 @@ function selectUltimate(e){
   document.getElementById("ultimate").className += " selected";
   selectedSize="ultimate";
 };
+/**
+ *
+ * CART PAGE FUNCTIONS
+ *
+ **/
+function cartContents(){
+  if((selectedDistro=="blank")||(selectedSize=="blank")||(serverName=='')){
+    document.getElementById('cart-instructions').innerHTML="It looks like you haven't selected selected any options for your server yet. How about we <a href='#pg-build' onclick='showBuild()'>Get one set up </a>.";
+    document.getElementById('cart-content').setAttribute("class", "hide-section");
+    if(selectedDistro=="blank"){
+      document.getElementById('cart-content').setAttribute("class", "show-section");
+    }
+    if(selectedSize=="blank"){
+      document.getElementById('cart-content').setAttribute("class", "show-section");
+    }
+    if(serverName==""){
+      document.getElementById('cart-content').setAttribute("class", "show-section");
+    }
+  } else{
+
+  }
+}
 /**
  *
  * HIGHCHARTS
