@@ -3868,6 +3868,7 @@ input[type=text] {
   font-size: 16px;
   color: #3d3d3d;
   border-radius: 5px;
+  width: 26.5%;
 }
 input[type=text]:focus {
   border: 1px solid rgba(66, 144, 197, 0.75);
