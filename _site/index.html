@@ -12,7 +12,7 @@
     <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="last-modified" content="Sat, 05 Mar 2016 19:05:58 -0500 GMT" />
+<meta http-equiv="last-modified" content="Sat, 05 Mar 2016 19:55:42 -0500 GMT" />
 <meta http-equiv="cache-control" content="Private" />
 <meta http-equiv="Expires" content="600" />
 <link rel="apple-touch-icon" href="favicon-apple-touch.png">
@@ -278,11 +278,10 @@
       <div>
         <h2>Server Name</h2>
         <p>Pick a name for your server so you can easily identify it later.</p>
-        <form>
-          <input type="text" name="serverName">
-        </form>
-        <div class="checkout">
-          <a href="#pg-cart" onclick="showCart();">Proceed to Checkout</a>
+        <input type="text" name="serverName">
+        <div id="error" class="hide-section"></div>
+        <div class="checkout" onclick="checkCart();">
+          <a href="#error">Proceed to Checkout</a>
         </div>
       </div>
     </div>

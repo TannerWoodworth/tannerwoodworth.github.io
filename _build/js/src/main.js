@@ -53,16 +53,38 @@ function showCart(e) {
  * GET STARTED PAGE FUNCTIONS
  *
  **/
+ var selectedDistro = "blank",
+     selectedSize  = "blank",
+     serverName,
+     errors;
+ function checkCart(e) {
+   serverName = document.getElementsByTagName("input")[0].value;
+   if((selectedDistro=="blank")||(selectedSize=="blank")||(serverName=='')){
+     document.getElementById('error').setAttribute("class", "show-section animated fadeIn");
+     errors="";
+     if(selectedDistro=="blank"){
+       errors+="<p>Please select a Distribution.</p>"
+     }
+     if(selectedSize=="blank"){
+       errors+="<p>Please select a Server Size.</p>"
+     }
+     if(serverName==""){
+       errors+="<p>Please select a Server Name.</p>"
+     }
+     document.getElementById('error').innerHTML=errors;
+     return false;
+   } else{
+     console.log(selectedDistro+', '+selectedSize+', '+serverName);
+     document.getElementById('pg-build').setAttribute("class", "hide-section");
+     document.getElementById('pg-cart').setAttribute("class", "show-section");
+     $('html,body').scrollTop(0);
+   }
+ }
  function goToSize(event) {
      $('html,body').animate({
          scrollTop: $("#size").offset().top
      }, 500);
  } // goToSize
-
-var selectedDistro = "blank",
-    selectedSize  = "blank",
-    serverName;
-
 function displayDist(e) {
   document.getElementById('cms').setAttribute("class", "hide-section");
   document.getElementById('dist').setAttribute("class", "group clearfix animated fadeIn show-section");

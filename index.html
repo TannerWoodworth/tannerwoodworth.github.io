@@ -217,11 +217,10 @@ layout: page_default
       <div>
         <h2>Server Name</h2>
         <p>Pick a name for your server so you can easily identify it later.</p>
-        <form>
-          <input type="text" name="serverName">
-        </form>
-        <div class="checkout">
-          <a href="#pg-cart" onclick="showCart();">Proceed to Checkout</a>
+        <input type="text" name="serverName">
+        <div id="error" class="hide-section"></div>
+        <div class="checkout" onclick="checkCart();">
+          <a href="#error">Proceed to Checkout</a>
         </div>
       </div>
     </div>

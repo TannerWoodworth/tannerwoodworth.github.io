@@ -3898,6 +3898,22 @@ input[type=text]:focus {
     width: 90%;
   }
 }
+#error {
+  background-color: rgba(207, 91, 90, 0.6);
+  border: 1px solid #822D2C;
+  color: #822D2C;
+  padding: .5em;
+  margin-top: 1em;
+  border-radius: 5px;
+}
+#error p {
+  margin: 0;
+}
+@media only screen and (max-width: 680px) {
+  #error {
+    width: 94%;
+  }
+}
 .clearfix:after {
   content: " ";
   /* Older browser do not support empty content */
