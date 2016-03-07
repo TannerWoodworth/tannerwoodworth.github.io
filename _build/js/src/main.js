@@ -54,180 +54,206 @@ function showCart(e) {
  * GET STARTED PAGE FUNCTIONS
  *
  **/
- function goToDist(event) {
-     $('html,body').animate({
-         scrollTop: $("#dist").offset().top
-     }, 500);
- }
- function goToSize(event) {
-     $('html,body').animate({
-         scrollTop: $("#size").offset().top
-     }, 500);
- }
- function highlightName(event) {
+function goToDist(event) {
+  $('html,body').animate({
+    scrollTop: $("#dist").offset().top
+  }, 500);
+}
+
+function goToSize(event) {
+  $('html,body').animate({
+    scrollTop: $("#size").offset().top
+  }, 500);
+}
+
+function highlightName(event) {
   serverName = document.getElementsByTagName("input")[0].setAttribute("class", "highlight");
- }
- var selectedDistro = ["blank", ""],
-     selectedSize  = ["blank", "", "", "", "", "",],
-     serverName='',
-     errors;
- function checkCart(e) {
-   serverName = document.getElementsByTagName("input")[0].value;
-   if((selectedDistro[0]=="blank")||(selectedSize[0]=="blank")||(serverName=='')){
-     document.getElementById('error').setAttribute("class", "show-section animated fadeIn");
-     errors="";
-     if(selectedDistro[0]=="blank"){
-       errors+="<a href='#dist' onclick='goToDist()'>Please select a Distribution.</a>";
-     }
-     if(selectedSize[0]=="blank"){
-       errors+="<a href='#size' onclick='goToSize()'>Please select a Server Size.</a>";
-     }
-     if(serverName==""){
-       errors+="<a href='#error' onclick='highlightName()'>Please select a Server Name.</a>";
-     }
-     document.getElementById('error').innerHTML=errors;
-     return false;
-   } else{
-     document.getElementById('error').setAttribute("class", "hide-section");
-     document.getElementById('pg-build').setAttribute("class", "hide-section");
-     document.getElementById('pg-cart').setAttribute("class", "show-section");
-     cartContents();
-     $('html,body').scrollTop(0);
-   }
- }
+}
+var selectedDistro = ["blank", ""],
+  selectedSize = ["blank", "", "", "", "", "", ],
+  serverName = '',
+  errors;
+
+function checkCart(e) {
+  serverName = document.getElementsByTagName("input")[0].value;
+  if ((selectedDistro[0] == "blank") || (selectedSize[0] == "blank") || (serverName == '')) {
+    document.getElementById('error').setAttribute("class", "show-section animated fadeIn");
+    errors = "";
+    if (selectedDistro[0] == "blank") {
+      errors += "<a href='#dist' onclick='goToDist()'>Please select a Distribution.</a>";
+    }
+    if (selectedSize[0] == "blank") {
+      errors += "<a href='#size' onclick='goToSize()'>Please select a Server Size.</a>";
+    }
+    if (serverName == "") {
+      errors += "<a href='#error' onclick='highlightName()'>Please select a Server Name.</a>";
+    }
+    document.getElementById('error').innerHTML = errors;
+    return false;
+  } else {
+    document.getElementById('error').setAttribute("class", "hide-section");
+    document.getElementById('pg-build').setAttribute("class", "hide-section");
+    document.getElementById('pg-cart').setAttribute("class", "show-section");
+    cartContents();
+    $('html,body').scrollTop(0);
+  }
+}
 
 function displayDist(e) {
   document.getElementById('cms').setAttribute("class", "hide-section");
   document.getElementById('dist').setAttribute("class", "group clearfix animated fadeIn show-section");
 }
+
 function displayCMS(e) {
   document.getElementById('dist').setAttribute("class", "hide-section");
   document.getElementById('cms').setAttribute("class", "group clearfix animated fadeIn show-section");
 }
 
-function selectUbuntu(e){
-  document.getElementById(selectedDistro[0]).className = document.getElementById(selectedDistro[0]).className.replace( /(?:^|\s)selected(?!\S)/g , '' );
+function selectUbuntu(e) {
+  document.getElementById(selectedDistro[0]).className = document.getElementById(selectedDistro[0]).className.replace(/(?:^|\s)selected(?!\S)/g, '');
   document.getElementById("ubuntu").className += " selected";
-  selectedDistro=["ubuntu", "Ubuntu", "15.10"];
+  selectedDistro = ["ubuntu", "Ubuntu", "15.10"];
 };
-function selectUbuntu2(e){
-  document.getElementById(selectedDistro[0]).className = document.getElementById(selectedDistro[0]).className.replace( /(?:^|\s)selected(?!\S)/g , '' );
+
+function selectUbuntu2(e) {
+  document.getElementById(selectedDistro[0]).className = document.getElementById(selectedDistro[0]).className.replace(/(?:^|\s)selected(?!\S)/g, '');
   document.getElementById("ubuntu2").className += " selected";
-  selectedDistro=["ubuntu2", "Ubuntu", "14.04"];
+  selectedDistro = ["ubuntu2", "Ubuntu", "14.04"];
 };
-function selectArdebian(e){
-  document.getElementById(selectedDistro[0]).className = document.getElementById(selectedDistro[0]).className.replace( /(?:^|\s)selected(?!\S)/g , '' );
+
+function selectArdebian(e) {
+  document.getElementById(selectedDistro[0]).className = document.getElementById(selectedDistro[0]).className.replace(/(?:^|\s)selected(?!\S)/g, '');
   document.getElementById("ardebian").className += " selected";
-  selectedDistro=["ardebian", "Ardebian", "8.3"];
+  selectedDistro = ["ardebian", "Ardebian", "8.3"];
 };
-function selectCentOS(e){
-  document.getElementById(selectedDistro[0]).className = document.getElementById(selectedDistro[0]).className.replace( /(?:^|\s)selected(?!\S)/g , '' );
+
+function selectCentOS(e) {
+  document.getElementById(selectedDistro[0]).className = document.getElementById(selectedDistro[0]).className.replace(/(?:^|\s)selected(?!\S)/g, '');
   document.getElementById("centos").className += " selected";
-  selectedDistro=["centos", "centOS", "7.2"];
+  selectedDistro = ["centos", "centOS", "7.2"];
 };
-function selectCoreOS(e){
-  document.getElementById(selectedDistro[0]).className = document.getElementById(selectedDistro[0]).className.replace( /(?:^|\s)selected(?!\S)/g , '' );
+
+function selectCoreOS(e) {
+  document.getElementById(selectedDistro[0]).className = document.getElementById(selectedDistro[0]).className.replace(/(?:^|\s)selected(?!\S)/g, '');
   document.getElementById("coreos").className += " selected";
-  selectedDistro=["coreos", "coreOS", "835.13.0"];
+  selectedDistro = ["coreos", "coreOS", "835.13.0"];
 };
-function selectFreeBSD(e){
-  document.getElementById(selectedDistro[0]).className = document.getElementById(selectedDistro[0]).className.replace( /(?:^|\s)selected(?!\S)/g , '' );
+
+function selectFreeBSD(e) {
+  document.getElementById(selectedDistro[0]).className = document.getElementById(selectedDistro[0]).className.replace(/(?:^|\s)selected(?!\S)/g, '');
   document.getElementById("freebsd").className += " selected";
-  selectedDistro=["freebsd", "freeBSD", "10.2"];
+  selectedDistro = ["freebsd", "freeBSD", "10.2"];
 };
-function selectWordpress(e){
-  document.getElementById(selectedDistro[0]).className = document.getElementById(selectedDistro[0]).className.replace( /(?:^|\s)selected(?!\S)/g , '' );
+
+function selectWordpress(e) {
+  document.getElementById(selectedDistro[0]).className = document.getElementById(selectedDistro[0]).className.replace(/(?:^|\s)selected(?!\S)/g, '');
   document.getElementById("wordpress").className += " selected";
-  selectedDistro=["wordpress", "Wordpress", "4.4.2"];
+  selectedDistro = ["wordpress", "Wordpress", "4.4.2"];
 };
-function selectDrupal7(e){
-  document.getElementById(selectedDistro[0]).className = document.getElementById(selectedDistro[0]).className.replace( /(?:^|\s)selected(?!\S)/g , '' );
+
+function selectDrupal7(e) {
+  document.getElementById(selectedDistro[0]).className = document.getElementById(selectedDistro[0]).className.replace(/(?:^|\s)selected(?!\S)/g, '');
   document.getElementById("drupal7").className += " selected";
-  selectedDistro=["drupal7", "Drupal", "7.43"];
+  selectedDistro = ["drupal7", "Drupal", "7.43"];
 };
-function selectDrupal8(e){
-  document.getElementById(selectedDistro[0]).className = document.getElementById(selectedDistro[0]).className.replace( /(?:^|\s)selected(?!\S)/g , '' );
+
+function selectDrupal8(e) {
+  document.getElementById(selectedDistro[0]).className = document.getElementById(selectedDistro[0]).className.replace(/(?:^|\s)selected(?!\S)/g, '');
   document.getElementById("drupal8").className += " selected";
-  selectedDistro=["drupal8", "Drupal", "8.0.5"];
+  selectedDistro = ["drupal8", "Drupal", "8.0.5"];
 };
-function selectJoomla(e){
-  document.getElementById(selectedDistro[0]).className = document.getElementById(selectedDistro[0]).className.replace( /(?:^|\s)selected(?!\S)/g , '' );
+
+function selectJoomla(e) {
+  document.getElementById(selectedDistro[0]).className = document.getElementById(selectedDistro[0]).className.replace(/(?:^|\s)selected(?!\S)/g, '');
   document.getElementById("joomla").className += " selected";
-  selectedDistro=["joomla", "Joomla", "3.4.8"];
+  selectedDistro = ["joomla", "Joomla", "3.4.8"];
 };
-function selectSmall(e){
-  document.getElementById(selectedSize[0]).className = document.getElementById(selectedSize[0]).className.replace( /(?:^|\s)selected(?!\S)/g , '' );
+
+function selectSmall(e) {
+  document.getElementById(selectedSize[0]).className = document.getElementById(selectedSize[0]).className.replace(/(?:^|\s)selected(?!\S)/g, '');
   document.getElementById("small").className += " selected";
-  selectedSize=["small", "Small", "10GB", "1GB ", "1TB", "$5"];
+  selectedSize = ["small", "Small", "10GB", "1GB ", "1TB", "$5"];
 };
-function selectMedium(e){
-  document.getElementById(selectedSize[0]).className = document.getElementById(selectedSize[0]).className.replace( /(?:^|\s)selected(?!\S)/g , '' );
+
+function selectMedium(e) {
+  document.getElementById(selectedSize[0]).className = document.getElementById(selectedSize[0]).className.replace(/(?:^|\s)selected(?!\S)/g, '');
   document.getElementById("medium").className += " selected";
-  selectedSize=["medium", "Medium", "30GB", "2GB ", "3TB", "$10"];
+  selectedSize = ["medium", "Medium", "30GB", "2GB ", "3TB", "$10"];
 };
-function selectLarge(e){
-  document.getElementById(selectedSize[0]).className = document.getElementById(selectedSize[0]).className.replace( /(?:^|\s)selected(?!\S)/g , '' );
+
+function selectLarge(e) {
+  document.getElementById(selectedSize[0]).className = document.getElementById(selectedSize[0]).className.replace(/(?:^|\s)selected(?!\S)/g, '');
   document.getElementById("large").className += " selected";
-  selectedSize=["large", "Large", "50GB", "6GB ", "5TB", "$20"];
+  selectedSize = ["large", "Large", "50GB", "6GB ", "5TB", "$20"];
 };
-function selectCorporate(e){
-  document.getElementById(selectedSize[0]).className = document.getElementById(selectedSize[0]).className.replace( /(?:^|\s)selected(?!\S)/g , '' );
+
+function selectCorporate(e) {
+  document.getElementById(selectedSize[0]).className = document.getElementById(selectedSize[0]).className.replace(/(?:^|\s)selected(?!\S)/g, '');
   document.getElementById("corporate").className += " selected";
-  selectedSize=["corporate", "Corporate", "500GB", "36GB ", "Unlimited", "$60"];
+  selectedSize = ["corporate", "Corporate", "500GB", "36GB ", "Unlimited", "$60"];
 };
-function selectUltimate(e){
-  document.getElementById(selectedSize[0]).className = document.getElementById(selectedSize[0]).className.replace( /(?:^|\s)selected(?!\S)/g , '' );
+
+function selectUltimate(e) {
+  document.getElementById(selectedSize[0]).className = document.getElementById(selectedSize[0]).className.replace(/(?:^|\s)selected(?!\S)/g, '');
   document.getElementById("ultimate").className += " selected";
-  selectedSize=["ultimate", "Ultimate", "1.5TB", "64GB ", "Unlimited", "$120"];
+  selectedSize = ["ultimate", "Ultimate", "1.5TB", "64GB ", "Unlimited", "$120"];
 };
 /**
  *
  * CART PAGE FUNCTIONS
  *
  **/
- function changeDist(){
-   document.getElementById('change-dist').setAttribute("class", "show-section");
-   document.getElementById('csd').setAttribute("class", "hide-section");
- }
- function changePlan(){
-   document.getElementById('change-plan').setAttribute("class", "show-section");
-   document.getElementById('csp').setAttribute("class", "hide-section");
- }
- function changeName(){
-   document.getElementById('change-name').setAttribute("class", "show-section");
-   document.getElementById('csn').setAttribute("class", "hide-section");
- }
- function changeCartName(){
-   serverName = document.getElementsByTagName("input")[1].value;
-   document.getElementById('cn').innerHTML=serverName;
-   document.getElementById('change-name').setAttribute("class", "hide-section");
-   document.getElementById('csn').setAttribute("class", "show-section");
- }
- function confirm() {
-   console.log("confirmed!")
- }
+
+function changeDist() {
+  document.getElementById('change-dist').setAttribute("class", "show-section");
+  document.getElementById('csd').setAttribute("class", "hide-section");
+}
+
+function changePlan() {
+  document.getElementById('change-plan').setAttribute("class", "show-section");
+  document.getElementById('csp').setAttribute("class", "hide-section");
+}
+
+function changeName() {
+  document.getElementById('change-name').setAttribute("class", "show-section");
+  document.getElementById('csn').setAttribute("class", "hide-section");
+}
+
+function changeCartName() {
+  serverName = document.getElementsByTagName("input")[1].value;
+  document.getElementById('cn').innerHTML = serverName;
+  document.getElementById('change-name').setAttribute("class", "hide-section");
+  document.getElementById('csn').setAttribute("class", "show-section");
+}
+
+function confirm() {
+  console.log("confirmed!")
+}
+
 function cartContents() {
-  if((selectedDistro[0]=="blank")&&(selectedSize[0]=="blank")&&(serverName=='')){
-    document.getElementById('cart-instructions').innerHTML="It looks like you haven't selected selected any options for your server yet. How about we <a href='#pg-build' onclick='showBuild()'>Get one set up </a>?";
+  if ((selectedDistro[0] == "blank") && (selectedSize[0] == "blank") && (serverName == '')) {
+    document.getElementById('cart-instructions').innerHTML = "It looks like you haven't selected selected any options for your server yet. How about we <a href='#pg-build' onclick='showBuild()'>Get one set up </a>?";
     document.getElementById('cart-content').setAttribute("class", "hide-section");
-  } else{
+  } else if ((selectedDistro[0] !== "blank") && (selectedSize[0] !== "blank") && (serverName !== '')) {
+    document.getElementById("final-checkout").className = document.getElementById("final-checkout").className.replace(/(?:^|\s)hide-section(?!\S)/g, '');
+    document.getElementById("large").className += " show-section";
+  }{
     document.getElementById('cart-content').setAttribute("class", "show-section");
-    document.getElementById('cart-instructions').innerHTML="Please take a moment to review your order. If all of the information is correct, click the confirm button below and we'll get your server set up for you so you can get going!";
-    if(selectedDistro[0]=="blank"){
-      document.getElementById('cart-distro').innerHTML="Looks like you still need to pick a distribution. How about we <a href='#dist' onclick='showBuild()'>select a distribution</a>?";
-    } else{
-      document.getElementById('cart-distro').innerHTML="<p class='info'>Distribution: <span class='important'>"+selectedDistro[1]+"</p> <p class='info'>Version: <span class='important'>"+selectedDistro[2]+"</p> <a id='csd' href='#dist' onclick='showBuild()'>Change Distribution</a>";
-    }
-    if(selectedSize[0]=="blank"){
-      document.getElementById('cart-size').innerHTML="Looks like you still need to pick a server size. How about we <a href='#size' onclick='showBuild()'>select a plan</a>?";
+    document.getElementById('cart-instructions').innerHTML = "Please take a moment to review your order. If all of the information is correct, click the confirm button below and we'll get your server set up for you so you can get going!";
+    if (selectedDistro[0] == "blank") {
+      document.getElementById('cart-distro').innerHTML = "Looks like you still need to pick a distribution. How about we <a href='#dist' onclick='showBuild()'>select a distribution</a>?";
     } else {
-      document.getElementById('cart-size').innerHTML="<p class='info'>Plan Name: <span class='important'>"+selectedSize[1]+"</p> <p class='info'>Size: <span class='important'>"+selectedSize[2]+"</p> <p class='info'>Speed: <span class='important'>"+selectedSize[3]+"</p><p class='info'>Transfer Limit: <span class='important'>"+selectedSize[4]+"</p> <a id='csp' href='#size' onclick='showBuild()'>Change Server Plan</a>";
+      document.getElementById('cart-distro').innerHTML = "<p class='info'>Distribution: <span class='important'>" + selectedDistro[1] + "</p> <p class='info'>Version: <span class='important'>" + selectedDistro[2] + "</p> <a id='csd' href='#dist' onclick='showBuild()'>Change Distribution</a>";
     }
-    if(serverName==""){
-      document.getElementById('cart-name').innerHTML="Looks like you still need to pick a server name. How about we <a href='#error' onclick='showBuild()'>pick a name</a>?";
+    if (selectedSize[0] == "blank") {
+      document.getElementById('cart-size').innerHTML = "Looks like you still need to pick a server size. How about we <a href='#size' onclick='showBuild()'>select a plan</a>?";
+    } else {
+      document.getElementById('cart-size').innerHTML = "<p class='info'>Plan Name: <span class='important'>" + selectedSize[1] + "</p> <p class='info'>Size: <span class='important'>" + selectedSize[2] + "</p> <p class='info'>Speed: <span class='important'>" + selectedSize[3] + "</p><p class='info'>Transfer Limit: <span class='important'>" + selectedSize[4] + "</p> <a id='csp' href='#size' onclick='showBuild()'>Change Server Plan</a>";
     }
-    else{
-      document.getElementById('cart-name').innerHTML="<p class='info'>Name: <span id='cn' class='important'>"+serverName+"</p> <a id='csn' href='#cart-name' onclick='changeName()'>Change Server Name</a>";
+    if (serverName == "") {
+      document.getElementById('cart-name').innerHTML = "Looks like you still need to pick a server name. How about we <a href='#error' onclick='showBuild()'>pick a name</a>?";
+    } else {
+      document.getElementById('cart-name').innerHTML = "<p class='info'>Name: <span id='cn' class='important'>" + serverName + "</p> <a id='csn' href='#cart-name' onclick='changeName()'>Change Server Name</a>";
     }
   }
 }
@@ -246,13 +272,13 @@ function cartContents() {
   jQuery.fn.hcCharts = function() {
     // Colors
     var sM = "#4290c5",
-        dSM = "#316B92",
-        as = "#CF5B5A",
-        dAS = "#822D2C",
-        hL = "#F8743A",
-        dHL = "#C55C2E",
-        sD = "#008a32",
-        dSD = "#007129";
+      dSM = "#316B92",
+      as = "#CF5B5A",
+      dAS = "#822D2C",
+      hL = "#F8743A",
+      dHL = "#C55C2E",
+      sD = "#008a32",
+      dSD = "#007129";
 
     var sharedOpts = {
       lang: {
@@ -488,7 +514,7 @@ function cartContents() {
       }
 
     }
-  //Returns JSON object from string
+    //Returns JSON object from string
   jQuery.fn.userOpts = function(string) {
     if ($.type(string) != 'string') return string;
     if (string.indexOf(':') != -1 && string.trim().substr(-1) != '}') {
