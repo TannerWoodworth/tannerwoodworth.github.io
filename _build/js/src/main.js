@@ -20,6 +20,7 @@ function showHome(e) {
   document.getElementById('pg-build').setAttribute("class", "hide-section");
   document.getElementById('pg-about').setAttribute("class", "hide-section");
   document.getElementById('pg-cart').setAttribute("class", "hide-section");
+  document.getElementById('pg-thanks').setAttribute("class", "hide-section");
   document.getElementById('pg-home').setAttribute("class", "show-section animated fadeIn");
   $('html,body').scrollTop(0);
 }
@@ -28,6 +29,7 @@ function showBuild(e) {
   document.getElementById('pg-home').setAttribute("class", "hide-section");
   document.getElementById('pg-about').setAttribute("class", "hide-section");
   document.getElementById('pg-cart').setAttribute("class", "hide-section");
+  document.getElementById('pg-thanks').setAttribute("class", "hide-section");
   document.getElementById('pg-build').setAttribute("class", "show-section");
   $('html,body').scrollTop(0);
 }
@@ -36,6 +38,7 @@ function showAbout(e) {
   document.getElementById('pg-home').setAttribute("class", "hide-section");
   document.getElementById('pg-build').setAttribute("class", "hide-section");
   document.getElementById('pg-cart').setAttribute("class", "hide-section");
+  document.getElementById('pg-thanks').setAttribute("class", "hide-section");
   document.getElementById('pg-about').setAttribute("class", "show-section");
   $('html,body').scrollTop(0);
   $(this).hcCharts();
@@ -45,6 +48,7 @@ function showCart(e) {
   document.getElementById('pg-home').setAttribute("class", "hide-section");
   document.getElementById('pg-about').setAttribute("class", "hide-section");
   document.getElementById('pg-build').setAttribute("class", "hide-section");
+  document.getElementById('pg-thanks').setAttribute("class", "hide-section");
   document.getElementById('pg-cart').setAttribute("class", "show-section");
   cartContents();
   $('html,body').scrollTop(0);
