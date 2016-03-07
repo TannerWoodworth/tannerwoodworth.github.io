@@ -269,6 +269,7 @@ function cartContents() {
       document.getElementById('cart-size').innerHTML = "Looks like you still need to pick a server size. How about we <a href='#size' onclick='showBuild()'>select a plan</a>?";
     } else {
       document.getElementById('cart-size').innerHTML = "<p class='info'>Plan Name: <span class='important'>" + selectedSize[1] + "</p> <p class='info'>Size: <span class='important'>" + selectedSize[2] + "</p> <p class='info'>Speed: <span class='important'>" + selectedSize[3] + "</p><p class='info'>Transfer Limit: <span class='important'>" + selectedSize[4] + "</p> <a id='csp' href='#size' onclick='showBuild()'>Change Server Plan</a>";
+      document.getElementById('monthlyCost').innerHTML = selectedSize[5];
     }
     if (serverName == "") {
       document.getElementById('cart-name').innerHTML = "Looks like you still need to pick a server name. How about we <a href='#name' onclick='showBuild()'>pick a name</a>?";
