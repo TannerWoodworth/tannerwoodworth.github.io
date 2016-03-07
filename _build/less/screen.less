@@ -526,12 +526,13 @@ input[type=text]{
   }
   &:hover{
     background-color: @dark-blue;
+    cursor: pointer;
   }
   @media only screen and (max-width : 680px){
     width:90%;
   }
 }
-#error{
+#error, #error-2{
   background-color:rgba(207,91,90,.5);
   border: 1px solid #822D2C;
   padding: .5em;
@@ -556,6 +557,13 @@ input[type=text]{
 }
 .confirm{
   margin-top: 2em !important;
+  .checkout
+}
+.secondary{
+  background-color: @medium-gray !important;
+  &:hover{
+    background-color: @dark-gray !important;
+  }
   .checkout
 }
 // ============== CLEARFIX ============= //

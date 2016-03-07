@@ -222,22 +222,36 @@ function changeName() {
 function changeCartName() {
   serverName = document.getElementsByTagName("input")[1].value;
   document.getElementById('cn').innerHTML = serverName;
-  document.getElementById('change-name').setAttribute("class", "hide-section");
-  document.getElementById('csn').setAttribute("class", "show-section");
+  if (serverName==''){
+    document.getElementById('error-2').setAttribute("class", "show-section animated fadeIn");
+    document.getElementById('final-checkout').setAttribute("class", "animated fadeOut");
+  } else{
+    document.getElementById('error-2').setAttribute("class", "hide-section");
+    document.getElementById('change-name').setAttribute("class", "hide-section");
+    document.getElementById('csn').setAttribute("class", "show-section");
+    cartVerify();
+  }
 }
 
 function confirm() {
-  console.log("confirmed!")
+  document.getElementById('pg-cart').setAttribute("class", "hide-section");
+  document.getElementById('pg-thanks').setAttribute("class", "show-section");
+  console.log("confirmed!");
 }
-
+function cartVerify(){
+  if ((selectedDistro[0] !== "blank") && (selectedSize[0] !== "blank") && (serverName !== '')) {
+   document.getElementById("final-checkout").className = document.getElementById("final-checkout").className.replace(/(?:^|\s)hide-section(?!\S)/g, '');
+   document.getElementById("final-checkout").className = "confirm animated fadeIn show-section";
+ }
+}
 function cartContents() {
+
+  cartVerify();
+
   if ((selectedDistro[0] == "blank") && (selectedSize[0] == "blank") && (serverName == '')) {
-    document.getElementById('cart-instructions').innerHTML = "It looks like you haven't selected selected any options for your server yet. How about we <a href='#pg-build' onclick='showBuild()'>Get one set up </a>?";
+    document.getElementById('cart-instructions').innerHTML = "It looks like you haven't selected selected any options for your server yet. How about we <a href='#pg-build' onclick='showBuild()'>get one set up </a>?";
     document.getElementById('cart-content').setAttribute("class", "hide-section");
-  } else if ((selectedDistro[0] !== "blank") && (selectedSize[0] !== "blank") && (serverName !== '')) {
-    document.getElementById("final-checkout").className = document.getElementById("final-checkout").className.replace(/(?:^|\s)hide-section(?!\S)/g, '');
-    document.getElementById("large").className += " show-section";
-  }{
+  } else{
     document.getElementById('cart-content').setAttribute("class", "show-section");
     document.getElementById('cart-instructions').innerHTML = "Please take a moment to review your order. If all of the information is correct, click the confirm button below and we'll get your server set up for you so you can get going!";
     if (selectedDistro[0] == "blank") {
