@@ -203,6 +203,9 @@ function selectUltimate(e){
    document.getElementById('change-name').setAttribute("class", "hide-section");
    document.getElementById('csn').setAttribute("class", "show-section");
  }
+ function confirm() {
+   console.log("confirmed!")
+ }
 function cartContents() {
   if((selectedDistro[0]=="blank")&&(selectedSize[0]=="blank")&&(serverName=='')){
     document.getElementById('cart-instructions').innerHTML="It looks like you haven't selected selected any options for your server yet. How about we <a href='#pg-build' onclick='showBuild()'>Get one set up </a>?";
@@ -211,15 +214,14 @@ function cartContents() {
     document.getElementById('cart-content').setAttribute("class", "show-section");
     document.getElementById('cart-instructions').innerHTML="Please take a moment to review your order. If all of the information is correct, click the confirm button below and we'll get your server set up for you so you can get going!";
     if(selectedDistro[0]=="blank"){
-      document.getElementById('cart-distro').innerHTML="Looks like you still need to pick a distribution. How about we <a href='#pg-build' onclick='showBuild()'>select a distribution</a>?";
+      document.getElementById('cart-distro').innerHTML="Looks like you still need to pick a distribution. How about we <a href='#dist' onclick='showBuild()'>select a distribution</a>?";
     } else{
-      document.getElementById('cart-distro').innerHTML="<p class='info'>Distribution: <span class='important'>"+selectedDistro[1]+"</p> <p class='info'>Version: <span class='important'>"+selectedDistro[2]+"</p> <a id='csd' href='#cart-distro' onclick='changeDist()'>Change Distribution</a>";
+      document.getElementById('cart-distro').innerHTML="<p class='info'>Distribution: <span class='important'>"+selectedDistro[1]+"</p> <p class='info'>Version: <span class='important'>"+selectedDistro[2]+"</p> <a id='csd' href='#dist' onclick='showBuild()'>Change Distribution</a>";
     }
     if(selectedSize[0]=="blank"){
-      document.getElementById('cart-size').innerHTML="Looks like you still need to pick a server size. How about we <a href='#pg-build' onclick='showBuild()'>select a plan</a>?";
-    }
-    else{
-      document.getElementById('cart-size').innerHTML="<p class='info'>Plan Name: <span class='important'>"+selectedSize[1]+"</p> <p class='info'>Size: <span class='important'>"+selectedSize[2]+"</p> <p class='info'>Speed: <span class='important'>"+selectedSize[3]+"</p><p class='info'>Transfer Limit: <span class='important'>"+selectedSize[4]+"</p> <a id='csp' href='#cart-size' onclick='changePlan()'>Change Server Plan</a>";
+      document.getElementById('cart-size').innerHTML="Looks like you still need to pick a server size. How about we <a href='#size' onclick='showBuild()'>select a plan</a>?";
+    } else {
+      document.getElementById('cart-size').innerHTML="<p class='info'>Plan Name: <span class='important'>"+selectedSize[1]+"</p> <p class='info'>Size: <span class='important'>"+selectedSize[2]+"</p> <p class='info'>Speed: <span class='important'>"+selectedSize[3]+"</p><p class='info'>Transfer Limit: <span class='important'>"+selectedSize[4]+"</p> <a id='csp' href='#size' onclick='showBuild()'>Change Server Plan</a>";
     }
     if(serverName==""){
       document.getElementById('cart-name').innerHTML="Looks like you still need to pick a server name. How about we <a href='#error' onclick='showBuild()'>pick a name</a>?";

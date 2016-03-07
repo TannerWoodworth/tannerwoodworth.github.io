@@ -3927,6 +3927,26 @@ input[type=text]:focus {
   font-weight: bold !important;
   color: #3d3d3d !important;
 }
+.confirm {
+  margin-top: 2em !important;
+  margin-top: 1em;
+  text-align: center;
+  background-color: #4290c5;
+  padding: 1em;
+  width: 25%;
+  border-radius: 5px;
+}
+.confirm a {
+  color: #fff;
+}
+.confirm:hover {
+  background-color: #316B92;
+}
+@media only screen and (max-width: 680px) {
+  .confirm {
+    width: 90%;
+  }
+}
 .clearfix:after {
   content: " ";
   /* Older browser do not support empty content */
