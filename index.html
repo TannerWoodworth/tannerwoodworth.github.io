@@ -214,11 +214,14 @@ layout: page_default
           </div>
         </div>
       </div>
-      <div>
+      <div id="name">
         <h2>Server Name</h2>
         <p>Pick a name for your server so you can easily identify it later.</p>
         <input type="text" name="serverName">
         <div id="error" class="hide-section"></div>
+        <div class="secondary" onclick="genName();">
+          <a href="#name">Generate a Name</a>
+        </div>
         <div class="checkout" onclick="checkCart();">
           <a href="#error">Proceed to Checkout</a>
         </div>

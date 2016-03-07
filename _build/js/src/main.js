@@ -72,6 +72,7 @@ function highlightName(event) {
 var selectedDistro = ["blank", ""],
   selectedSize = ["blank", "", "", "", "", "", ],
   serverName = '',
+  generatedName,
   errors;
 
 function checkCart(e) {
@@ -198,6 +199,11 @@ function selectUltimate(e) {
   document.getElementById("ultimate").className += " selected";
   selectedSize = ["ultimate", "Ultimate", "1.5TB", "64GB ", "Unlimited", "$120"];
 };
+
+function genName(){
+  generatedName = selectedDistro[1]+"-"+selectedSize[2];
+  document.getElementsByTagName("input")[0].setAttribute("value", generatedName);
+}
 /**
  *
  * CART PAGE FUNCTIONS
@@ -236,8 +242,8 @@ function changeCartName() {
 function confirm() {
   document.getElementById('pg-cart').setAttribute("class", "hide-section");
   document.getElementById('pg-thanks').setAttribute("class", "show-section");
-  console.log("confirmed!");
 }
+
 function cartVerify(){
   if ((selectedDistro[0] !== "blank") && (selectedSize[0] !== "blank") && (serverName !== '')) {
    document.getElementById("final-checkout").className = document.getElementById("final-checkout").className.replace(/(?:^|\s)hide-section(?!\S)/g, '');
@@ -265,7 +271,7 @@ function cartContents() {
       document.getElementById('cart-size').innerHTML = "<p class='info'>Plan Name: <span class='important'>" + selectedSize[1] + "</p> <p class='info'>Size: <span class='important'>" + selectedSize[2] + "</p> <p class='info'>Speed: <span class='important'>" + selectedSize[3] + "</p><p class='info'>Transfer Limit: <span class='important'>" + selectedSize[4] + "</p> <a id='csp' href='#size' onclick='showBuild()'>Change Server Plan</a>";
     }
     if (serverName == "") {
-      document.getElementById('cart-name').innerHTML = "Looks like you still need to pick a server name. How about we <a href='#error' onclick='showBuild()'>pick a name</a>?";
+      document.getElementById('cart-name').innerHTML = "Looks like you still need to pick a server name. How about we <a href='#name' onclick='showBuild()'>pick a name</a>?";
     } else {
       document.getElementById('cart-name').innerHTML = "<p class='info'>Name: <span id='cn' class='important'>" + serverName + "</p> <a id='csn' href='#cart-name' onclick='changeName()'>Change Server Name</a>";
     }

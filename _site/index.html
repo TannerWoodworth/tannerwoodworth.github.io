@@ -12,7 +12,7 @@
     <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="last-modified" content="Sun, 06 Mar 2016 20:26:23 -0500 GMT" />
+<meta http-equiv="last-modified" content="Sun, 06 Mar 2016 20:41:27 -0500 GMT" />
 <meta http-equiv="cache-control" content="Private" />
 <meta http-equiv="Expires" content="600" />
 <link rel="apple-touch-icon" href="favicon-apple-touch.png">
@@ -275,11 +275,14 @@
           </div>
         </div>
       </div>
-      <div>
+      <div id="name">
         <h2>Server Name</h2>
         <p>Pick a name for your server so you can easily identify it later.</p>
         <input type="text" name="serverName">
         <div id="error" class="hide-section"></div>
+        <div class="secondary" onclick="genName();">
+          <a href="#name">Generate a Name</a>
+        </div>
         <div class="checkout" onclick="checkCart();">
           <a href="#error">Proceed to Checkout</a>
         </div>
