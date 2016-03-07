@@ -205,7 +205,7 @@ function selectUltimate(e) {
 };
 
 function genName(){
-  generatedName = selectedDistro[1]+"-"+selectedSize[2];
+  generatedName = selectedDistro[1]+"_"+selectedDistro[2]+"-"+selectedSize[2];
   document.getElementsByTagName("input")[0].setAttribute("value", generatedName);
 }
 /**
