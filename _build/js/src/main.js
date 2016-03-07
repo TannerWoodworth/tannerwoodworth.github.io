@@ -101,11 +101,15 @@ function checkCart(e) {
 }
 
 function displayDist(e) {
+  document.getElementById("okaBtn").className = document.getElementById("okaBtn").className.replace(/(?:^|\s)selected-tab(?!\S)/g, '');
+  document.getElementById("distBtn").className += " selected-tab";
   document.getElementById('cms').setAttribute("class", "hide-section");
   document.getElementById('dist').setAttribute("class", "group clearfix animated fadeIn show-section");
 }
 
 function displayCMS(e) {
+  document.getElementById("distBtn").className = document.getElementById("distBtn").className.replace(/(?:^|\s)selected-tab(?!\S)/g, '');
+  document.getElementById("okaBtn").className += " selected-tab";
   document.getElementById('dist').setAttribute("class", "hide-section");
   document.getElementById('cms').setAttribute("class", "group clearfix animated fadeIn show-section");
 }
@@ -241,7 +245,7 @@ function changeCartName() {
 
 function confirm() {
   document.getElementById('pg-cart').setAttribute("class", "hide-section");
-  document.getElementById('pg-thanks').setAttribute("class", "show-section");
+  document.getElementById('pg-thanks').setAttribute("class", "animated fadeIn show-section");
 }
 
 function cartVerify(){

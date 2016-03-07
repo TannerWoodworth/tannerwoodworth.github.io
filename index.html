@@ -66,8 +66,8 @@ layout: page_default
     <h1>Setup your Plan</h1>
     <h2>Select a Distribution</h2>
     <div class="select-distro clearfix">
-      <a href="#" onclick="displayDist();">Distributions</a>
-      <a href="#" onclick="displayCMS();">Content Management Systems</a>
+      <a id="distBtn" class="selected-tab" href="#" onclick="displayDist();">Distributions</a>
+      <a id="okaBtn" class="" href="#" onclick="displayCMS();">One-Click Apps</a>
     </div>
     <div id="dist" class="group clearfix">
       <div id="blank" class="selected hidden"></div>
@@ -292,9 +292,10 @@ layout: page_default
     </div>
   </main>
 </div>
-<div id="pg-about" class="hide-section">
+<div id="pg-thanks" class="hide-section">
   <main>
     <h1>Thank you!</h1>
     <p>It means so much to us that you chose to place your order with us today! In fact, why don't you take the rest of the week off, really!</p>
+    <p>Remember, if you have any questions about your server we're always here to help!</p>
   </main>
 </div>
