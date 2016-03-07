@@ -230,16 +230,18 @@ function changeName() {
 }
 
 function changeCartName() {
-  serverName = document.getElementsByTagName("input")[1].value;
   document.getElementById('cn').innerHTML = serverName;
-  if (serverName==''){
-    document.getElementById('error-2').setAttribute("class", "show-section animated fadeIn");
-    document.getElementById('final-checkout').setAttribute("class", "animated fadeOut");
-  } else{
-    document.getElementById('error-2').setAttribute("class", "hide-section");
+  if (document.getElementsByTagName("input")[1].value==''){
     document.getElementById('change-name').setAttribute("class", "hide-section");
     document.getElementById('csn').setAttribute("class", "show-section");
-    cartVerify();
+    // document.getElementById('error-2').setAttribute("class", "show-section animated fadeIn");
+    // document.getElementById('final-checkout').setAttribute("class", "animated fadeOut");
+  } else{
+    serverName = document.getElementsByTagName("input")[1].value;
+    // document.getElementById('error-2').setAttribute("class", "hide-section");
+    document.getElementById('change-name').setAttribute("class", "hide-section");
+    document.getElementById('csn').setAttribute("class", "show-section");
+    cartContents();
   }
 }
 
