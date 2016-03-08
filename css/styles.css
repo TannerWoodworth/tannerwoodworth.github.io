@@ -3990,6 +3990,9 @@ input[type=text]:focus {
   padding: .25em;
   border-radius: 5px;
 }
+.disclaim {
+  color: #ccc;
+}
 .clearfix:after {
   content: " ";
   /* Older browser do not support empty content */
