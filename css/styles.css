@@ -3473,6 +3473,8 @@ footer {
 }
 .info_block {
   padding: 1em 0.5em;
+  min-height: 225px;
+  padding: 2em;
 }
 .info_block:nth-child(odd) {
   background-color: #eee;
@@ -3484,9 +3486,9 @@ footer {
 }
 .info_block:nth-child(odd) img {
   float: right;
-  margin-left: 1em;
-  width: 40%;
-  max-width: 350px;
+  margin: 2em 4em 0 1em;
+  width: 30%;
+  max-width: 225px;
 }
 @media only screen and (max-width: 680px) {
   .info_block:nth-child(odd) img {
@@ -3530,8 +3532,8 @@ footer {
   float: left;
   margin-right: 6em;
   margin-left: -0.5em;
-  width: 40%;
-  max-width: 350px;
+  width: 30%;
+  max-width: 225px;
 }
 @media only screen and (max-width: 750px) {
   .info_block:nth-child(even) img {
@@ -4032,6 +4034,30 @@ input[type=text]:focus {
 }
 .disclaim {
   color: #666;
+}
+#secure > img {
+  margin-top: 4em;
+  margin-bottom: 5em;
+}
+#fast > img {
+  margin-top: 3em;
+  margin-left: 6em;
+  max-width: 150px;
+}
+@media only screen and (max-width: 680px) {
+  #fast > img {
+    margin: 0 auto;
+  }
+}
+#simple > img {
+  margin-top: 3em;
+  margin-left: 6em;
+  max-width: 250px;
+}
+@media only screen and (max-width: 680px) {
+  #simple > img {
+    margin: 0 auto;
+  }
 }
 .clearfix:after {
   content: " ";
