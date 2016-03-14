@@ -271,7 +271,8 @@ function changeCartName() {
 
 function confirm() {
   document.getElementById('pg-cart').setAttribute("class", "hide-section");
-  document.getElementById('pg-thanks').setAttribute("class", "animated fadeIn show-section");
+  document.getElementById('pg-final').setAttribute("class", "animated fadeIn show-section");
+  showProgress();
 }
 
 function cartVerify(){
@@ -314,6 +315,13 @@ function showProgress() {
         id = setInterval(frame, 80);
         callFrame = true;
     function frame() {
+      if ((width >= 30)&&(width <= 59)) {
+        document.getElementById('box-message').innerHTML ="Setting up IP";
+      } else if ((width >= 60)&&(width <= 89)){
+        document.getElementById('box-message').innerHTML ="Installing "+selectedDistro[1];
+      } else if (width >= 90){
+        document.getElementById('box-message').innerHTML ="Finishing Touches...";
+      };
         if (width >= 100) {
             clearInterval(id);
         } else {
@@ -327,7 +335,7 @@ function showProgress() {
         }
         console.log(width);
         if (width >= 90){
-          setTimeout(showThanks, 3000);
+          setTimeout(showThanks, 2000);
         }
     }
 
