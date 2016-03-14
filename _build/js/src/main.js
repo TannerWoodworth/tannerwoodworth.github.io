@@ -312,12 +312,12 @@ function cartContents() {
 function showProgress() {
     var elem = document.getElementById("bar"),
         width = 1,
-        id = setInterval(frame, 80);
+        id = setInterval(frame, 100);
         callFrame = true;
     function frame() {
-      if ((width >= 30)&&(width <= 59)) {
+      if ((width >= 30)&&(width <= 49)) {
         document.getElementById('box-message').innerHTML ="Setting up IP";
-      } else if ((width >= 60)&&(width <= 89)){
+      } else if ((width >= 50)&&(width <= 89)){
         document.getElementById('box-message').innerHTML ="Installing "+selectedDistro[1];
       } else if (width >= 90){
         document.getElementById('box-message').innerHTML ="Finishing Touches...";
