@@ -12,7 +12,7 @@
     <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="last-modified" content="Mon, 14 Mar 2016 08:33:58 -0400 GMT" />
+<meta http-equiv="last-modified" content="Mon, 14 Mar 2016 10:09:41 -0400 GMT" />
 <meta http-equiv="cache-control" content="Private" />
 <meta http-equiv="Expires" content="600" />
 <link rel="apple-touch-icon" href="favicon-apple-touch.png">
@@ -61,6 +61,9 @@
         </li>
         <li class="nav-cart  animated_4 fadeInDown">
           <a href="#" onclick="showCart();">Cart</a>
+        </li>
+        <li class="nav-cart  animated_4 fadeInDown">
+          <a href="#" onclick="showFinal();">Final</a>
         </li>
       </ul>
     </nav>
@@ -353,10 +356,24 @@
     </div>
   </div>
 </div>
+<div id="pg-final" class="hide-section">
+  <div class="main">
+    <h1>Building...</h1>
+    <div class="notification-box">
+      <h2>Building your server</h2>
+      <p id="box-message">This should just take one moment.</p>
+      <div id="progress">
+        <div id="bar"></div>
+      </div>
+      <p id="progressPercent"></p>
+    </div>
+  </div>
+</div>
 <div id="pg-thanks" class="hide-section">
   <div class="main">
     <h1>Thank you!</h1>
     <p>It means so much to us that you chose to place your order with us today! In fact, why don't you take the rest of the week off, really!</p>
+    <p>You will be receiving an email shortly with your server's information and instructions on how to access it along with a getting started guide.</p>
     <p>Remember, if you have any questions about your server we're always here to help!</p>
   </div>
 </div>

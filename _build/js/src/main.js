@@ -53,6 +53,26 @@ function showCart(e) {
   cartContents();
   $('html,body').scrollTop(0);
 }
+
+function showFinal(e) {
+  document.getElementById('pg-home').setAttribute("class", "hide-section");
+  document.getElementById('pg-about').setAttribute("class", "hide-section");
+  document.getElementById('pg-build').setAttribute("class", "hide-section");
+  document.getElementById('pg-thanks').setAttribute("class", "hide-section");
+  document.getElementById('pg-cart').setAttribute("class", "hide-section");
+  document.getElementById('pg-final').setAttribute("class", "show-section");
+  showProgress();
+  $('html,body').scrollTop(0);
+}
+function showThanks(e) {
+  document.getElementById('pg-home').setAttribute("class", "hide-section");
+  document.getElementById('pg-about').setAttribute("class", "hide-section");
+  document.getElementById('pg-build').setAttribute("class", "hide-section");
+  document.getElementById('pg-thanks').setAttribute("class", "animated fadeIn show-section");
+  document.getElementById('pg-cart').setAttribute("class", "hide-section");
+  document.getElementById('pg-final').setAttribute("class", "hide-section");
+  $('html,body').scrollTop(0);
+}
 /**
  *
  * GET STARTED PAGE FUNCTIONS
@@ -288,6 +308,30 @@ function cartContents() {
     }
   }
 }
+function showProgress() {
+    var elem = document.getElementById("bar"),
+        width = 1,
+        id = setInterval(frame, 80);
+        callFrame = true;
+    function frame() {
+        if (width >= 100) {
+            clearInterval(id);
+        } else {
+            rand = Math.floor((Math.random() * 3) + 1);
+            width=(width+rand); 
+            if (width > 100){
+              width=100;
+            }
+            elem.style.width = width + '%'; 
+            document.getElementById("progressPercent").innerHTML=width+"%"
+        }
+        console.log(width);
+        if (width >= 90){
+          setTimeout(showThanks, 3000);
+        }
+    }
+
+}
 /**
  *
  * HIGHCHARTS
@@ -358,6 +402,7 @@ function cartContents() {
               text: null
             },
             labels: {
+              rotation: -90,
               style: {
                 fontSize: 16,
                 color: '#676767',
